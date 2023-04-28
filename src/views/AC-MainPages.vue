@@ -2,7 +2,6 @@
   <ac-header />
   <div class="main__pages">
     <ac-description-bot />
-    <ac-function-bot />
     <ac-manual-bot />
     <ac-video-the-bot />
     <ac-auto-consultant />
@@ -14,7 +13,6 @@
 
 <script>
 import AcDescriptionBot from "@/components/AC-DescriptionBot";
-import AcFunctionBot from "@/components/AC-FunctionBot";
 import AcManualBot from "@/components/AC-ManualBot";
 import AcVideoTheBot from "@/components/AC-VideoTheBot";
 import AcAutoConsultant from "@/components/AC-AutoConsultant";
@@ -27,7 +25,6 @@ export default {
     AcAutoConsultant,
     AcVideoTheBot,
     AcManualBot,
-    AcFunctionBot,
     AcDescriptionBot,
     ACBuySubscription,
   },

@@ -60,6 +60,7 @@ export default {
 <style lang="scss">
 @import "@/assets/scss/variables.scss";
 .function__wrapper {
+  display: block;
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
@@ -91,8 +92,50 @@ export default {
         &-subtitle {
           font-weight: 500;
           font-size: $small-font-size;
-          line-height: $small-font-size + 2px;
+          line-height: $small-line-height + 2px;
           text-align: center;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .function__wrapper {
+    max-width: 768px;
+    .function__content {
+      &-title {
+        font-weight: 700;
+        font-size: $h2-font-size - 28px;
+        line-height: $h2-line-height - 28px;
+      }
+      &__reminders {
+        column-gap: 24px;
+        row-gap: 24px;
+        &__option {
+          &-subtitle {
+            font-size: $small-font-size - 14px;
+            line-height: $small-line-height - 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .function__wrapper {
+    max-width: 360px;
+    .function__content {
+      &-title {
+        h2 {
+          font-weight: 800;
+        }
+      }
+      &__reminders {
+        grid-template-columns: 1fr;
+        &__option {
+          &-img {
+            background: #e5dfdf;
+          }
         }
       }
     }

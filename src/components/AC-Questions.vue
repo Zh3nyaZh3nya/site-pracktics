@@ -157,4 +157,103 @@ export default {
     }
   }
 }
+@media (max-width: 1360px) {
+  .questions__wrapper {
+    .questions__content {
+      &-title {
+        font-size: $h1-font-size - 36px;
+        line-height: $h1-line-height - 8px;
+        margin-bottom: 40px;
+      }
+      &__list {
+        padding: 36px 28px;
+        &__item {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 26px;
+          &__header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            align-items: center;
+            text-align: center;
+            &-title {
+              font-weight: 400;
+              font-size: $small-font-size - 6px;
+              line-height: $small-font-size;
+              text-align: start;
+            }
+          }
+          &-subtitle {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .questions__wrapper {
+    max-width: 768px;
+    .questions__content {
+      &-title {
+        font-size: $h1-font-size - 70px;
+        line-height: $h1-line-height - 28px;
+        margin-bottom: 20px;
+      }
+      &__list {
+        padding: 0;
+        &__item {
+          &__header {
+            &-title {
+              font-weight: 400;
+              font-size: $small-font-size - 4px;
+              line-height: $small-font-size;
+            }
+          }
+          &-subtitle {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .questions__wrapper {
+    max-width: 360px;
+    margin-bottom: 48px;
+    .questions__content {
+      padding: 0;
+      &-title {
+        margin-bottom: 20px;
+        h2 {
+          font-weight: 800;
+          font-size: $h1-font-size - 90px;
+          line-height: $h1-line-height - 55px;
+        }
+      }
+      &__list {
+        &__item {
+          &__header {
+            &-title {
+              font-weight: 400;
+              font-size: $small-font-size - 12px;
+              line-height: $small-font-size;
+            }
+          }
+          &-subtitle {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

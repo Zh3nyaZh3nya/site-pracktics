@@ -14,8 +14,10 @@ $small-font-size: 32px;
 
 $h1-line-height: 120px;
 $h2-line-height: 88px;
-$base-font-size: 48px;
-$small-font-size: 38px;
+$base-line-height: 48px;
+$small-line-height: 38px;
 
-// adaptive
+// z-index
 
+$z-index-header: 5;
+$z-index-burger: 4;

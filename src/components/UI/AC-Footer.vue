@@ -43,4 +43,40 @@ export default {
     }
   }
 }
+@media (max-width: 1360px) {
+  .footer {
+    max-width: 1096px;
+    &__nav {
+      span {
+        font-size: 24px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    max-width: 768px;
+    &__nav {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+      padding: 40px 20px;
+      span {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      &__company {
+        row-gap: 20px;
+        span {
+          color: #a9abaa;
+        }
+        img {
+          margin-left: 0px;
+          width: 134px;
+        }
+      }
+    }
+  }
+}
 </style>

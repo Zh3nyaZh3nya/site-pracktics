@@ -70,22 +70,20 @@ export default {
             color: #fff;
             padding: 12px;
             font-weight: 500;
-            font-size: 44px;
-            line-height: 56px;
+            font-size: $base-font-size + 4px;
+            line-height: $base-line-height + 8px;
           }
           &-full {
-            display: grid;
-            grid-template-columns: 1fr;
             span:nth-child(1) {
               font-weight: 500;
-              font-size: 44px;
-              line-height: 56px;
+              font-size: $base-font-size + 4px;
+              line-height: $base-line-height + 8px;
               text-decoration-line: line-through;
             }
             span:nth-child(2) {
               font-weight: 500;
-              font-size: 28px;
-              line-height: 32px;
+              font-size: $small-font-size - 4px;
+              line-height: $small-line-height - 6px;
               color: #6c6c6c;
             }
           }
@@ -101,6 +99,77 @@ export default {
         position: absolute;
         right: 80px;
         bottom: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 1360px) {
+  .subscription__wrapper {
+    max-width: 786px;
+    width: 100%;
+    margin: 0 auto;
+    .subscription__content {
+      &__column {
+        &__left {
+          padding: 0;
+        }
+        &__right {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .subscription__wrapper {
+    max-width: 360px;
+    margin: 0 auto;
+    .subscription__content {
+      &__column {
+        padding: 20px;
+        &__left {
+          padding: 0;
+          &-title {
+            font-size: 90px;
+            line-height: 80px;
+            margin-bottom: 29px;
+            span:nth-child(2) {
+              font-size: 22px;
+              line-height: 32px;
+            }
+          }
+          &__price {
+            &-disc {
+              padding: 5px 20px;
+              font-size: $base-font-size - 20px;
+              line-height: $base-line-height - 12px;
+            }
+            &-full {
+              display: grid;
+              grid-template-columns: 1fr;
+              span:nth-child(1) {
+                font-weight: 500;
+                font-size: $base-font-size - 20px;
+                line-height: $base-line-height - 20px;
+                text-decoration-line: line-through;
+              }
+              span:nth-child(2) {
+                font-weight: 500;
+                font-size: $small-font-size - 16px;
+                line-height: $small-line-height - 16px;
+                color: #6c6c6c;
+              }
+            }
+            &-btn {
+              #green-button {
+                padding: 21px 117px;
+              }
+            }
+          }
+        }
+        &__right {
+          display: none;
+        }
       }
     }
   }

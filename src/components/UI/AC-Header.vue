@@ -18,6 +18,32 @@
           <ac-button><span>Xочу купить</span></ac-button>
         </div>
       </nav>
+      <div class="header__burger">
+        <div v-if="this.visibleBurger === true" class="openBurger">
+          <button @click="showBurger">
+            <span></span>
+          </button>
+        </div>
+        <div v-else class="closedBurger">
+          <button @click="showBurger">
+            <img src="@/assets/svgIcon/closed.svg" alt="" />
+          </button>
+          <nav class="burger__row__nav">
+            <div
+              class="burger__row__nav-btn"
+              v-for="link in headerNav"
+              :key="link.id"
+            >
+              <button @click="link.nameFunc">
+                <span>{{ link.nameBtn }}</span>
+              </button>
+            </div>
+            <div class="burger__row__nav-button">
+              <ac-button id="green-button"><span>Xочу купить</span></ac-button>
+            </div>
+          </nav>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -41,7 +67,13 @@ export default {
           nameFunc: "scrollAnswer",
         },
       ],
+      visibleBurger: true,
     };
+  },
+  methods: {
+    showBurger() {
+      this.visibleBurger = !this.visibleBurger;
+    },
   },
 };
 </script>
@@ -52,6 +84,7 @@ export default {
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
+  padding: 28px 80px;
   .header__row {
     margin-top: 30px;
     display: flex;
@@ -59,6 +92,7 @@ export default {
     align-items: center;
     margin-bottom: 35px;
     &-title {
+      z-index: $z-index-header;
       span {
         font-weight: 700;
         font-size: 36px;
@@ -78,6 +112,92 @@ export default {
           font-weight: 500;
           font-size: 20px;
           line-height: 90%;
+        }
+      }
+    }
+  }
+}
+
+.header__burger {
+  display: none;
+}
+@media (max-width: 1092px) {
+  .header__wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 902px) {
+  .header__wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+    .header__row {
+      &__nav {
+        display: none;
+      }
+      .header__burger {
+        display: block;
+        .openBurger {
+          position: relative;
+          width: 30px;
+          height: 20px;
+          span {
+            position: absolute;
+            display: block;
+            content: "";
+            background-color: #000;
+            width: 30px;
+            height: 2px;
+            top: 9px;
+            right: 0;
+          }
+          button:before,
+          button:after {
+            display: block;
+            content: "";
+            background-color: #000;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            right: 0;
+          }
+          button:before {
+            width: 30px;
+            top: 0;
+          }
+          button:after {
+            width: 30px;
+            bottom: 0;
+          }
+        }
+        .closedBurger {
+          position: relative;
+          button {
+            position: relative;
+            z-index: $z-index-burger;
+          }
+          .burger__row__nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            button {
+              margin-bottom: 45px;
+            }
+            span {
+              font-weight: 800;
+              font-size: $small-font-size + 2px;
+              line-height: $small-line-height + 2px;
+            }
+          }
         }
       }
     }

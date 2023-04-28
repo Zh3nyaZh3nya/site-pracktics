@@ -47,7 +47,11 @@ export default {
     position: relative;
     margin-bottom: 72px;
     video {
-      max-width: 1360px;
+      max-width: 1240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 52px;
       width: 100%;
       margin: 0 auto;
     }
@@ -67,6 +71,36 @@ export default {
       transform: translate(-50%, -50%);
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
+    }
+  }
+}
+@media (max-width: 1240px) {
+  .video__wrapper {
+    max-width: 1240px;
+    .video__content {
+      video {
+        max-width: 960px;
+      }
+    }
+  }
+}
+@media (max-width: 960px) {
+  .video__wrapper {
+    max-width: 960px;
+    .video__content {
+      video {
+        max-width: 768px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .video__wrapper {
+    max-width: 768px;
+    .video__content {
+      video {
+        max-width: 360px;
+      }
     }
   }
 }
