@@ -1,0 +1,32 @@
+<template>
+  <button class="custom__button">
+    <slot></slot>
+  </button>
+</template>
+
+<script>
+export default {
+  name: "ac-button",
+};
+</script>
+
+<style lang="scss">
+@import "@/assets/scss/variables.scss";
+.custom__button {
+  padding: 14px 32px;
+  border-radius: 16px;
+  color: #fff;
+  background: black;
+  span {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+  }
+}
+#green-button {
+  padding: 32px 80px;
+  color: #000;
+  background: $green-color;
+  border-radius: 48px;
+}
+</style>
