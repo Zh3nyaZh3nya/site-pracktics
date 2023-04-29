@@ -5,14 +5,17 @@
         <span>auto</span><span>consultant</span>
       </div>
       <nav class="header__row__nav">
-        <div
-          class="header__row__nav-btn"
-          v-for="link in headerNav"
-          :key="link.id"
-        >
-          <button @click="link.nameFunc">
-            <span>{{ link.nameBtn }}</span>
-          </button>
+        <div class="header__row__nav__link">
+          <div class="header__row__nav__link-btn">
+            <button>
+              <span>Как работает бот</span>
+            </button>
+          </div>
+          <div class="header__row__nav__link-btn">
+            <button>
+              <span>Вопросы и ответы</span>
+            </button>
+          </div>
         </div>
         <div class="header__row__nav-button">
           <ac-button><span>Xочу купить</span></ac-button>
@@ -29,14 +32,17 @@
             <img src="@/assets/svgIcon/closed.svg" alt="" />
           </button>
           <nav class="burger__row__nav">
-            <div
-              class="burger__row__nav-btn"
-              v-for="link in headerNav"
-              :key="link.id"
-            >
-              <button @click="link.nameFunc">
-                <span>{{ link.nameBtn }}</span>
-              </button>
+            <div class="burger__row__nav__link">
+              <div class="burger__row__nav__link-descJob">
+                <button @click="scrollToJob">
+                  <span>Как работает бот</span>
+                </button>
+              </div>
+              <div class="burger__row__nav__link-questions">
+                <button @click="scrollToQuestions">
+                  <span>Вопросы и ответы</span>
+                </button>
+              </div>
             </div>
             <div class="burger__row__nav-button">
               <ac-button id="green-button"><span>Xочу купить</span></ac-button>
@@ -52,21 +58,8 @@
 export default {
   name: "ac-header",
   components: {},
-
   data() {
     return {
-      headerNav: [
-        {
-          id: 1,
-          nameBtn: "Как работает бот",
-          nameFunc: "scrollJob",
-        },
-        {
-          id: 2,
-          nameBtn: "Вопросы и ответы",
-          nameFunc: "scrollAnswer",
-        },
-      ],
       visibleBurger: true,
     };
   },
@@ -106,8 +99,10 @@ export default {
     &__nav {
       display: flex;
       column-gap: 37px;
-      align-items: center;
-      &-btn {
+      &__link {
+        display: flex;
+        align-items: center;
+        column-gap: 37px;
         span {
           font-weight: 500;
           font-size: 20px;
@@ -121,7 +116,7 @@ export default {
 .header__burger {
   display: none;
 }
-@media (max-width: 1092px) {
+@media (max-width: 1240px) {
   .header__wrapper {
     max-width: 1024px;
     margin: 0 auto;
@@ -130,15 +125,19 @@ export default {
 }
 @media (max-width: 902px) {
   .header__wrapper {
-    max-width: 768px;
+    max-width: 902px;
     margin: 0 auto;
-    position: relative;
+    position: fixed;
+    z-index: $z-index-header;
+    background: #d9d9d9;
     .header__row {
       &__nav {
         display: none;
       }
       .header__burger {
         display: block;
+        position: relative;
+        z-index: $z-index-burger;
         .openBurger {
           position: relative;
           width: 30px;

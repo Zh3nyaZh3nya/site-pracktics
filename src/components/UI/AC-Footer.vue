@@ -22,6 +22,8 @@ export default {
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
+  background: #fff;
+  border-radius: 60px 60px 0 0;
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -47,6 +49,7 @@ export default {
   .footer {
     max-width: 1096px;
     &__nav {
+      padding: 40px 40px;
       span {
         font-size: 24px;
         line-height: 26px;

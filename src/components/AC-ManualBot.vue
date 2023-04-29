@@ -50,12 +50,15 @@
         </div>
       </div>
     </div>
+    <ac-video-the-bot />
   </section>
 </template>
 
 <script>
+import AcVideoTheBot from "@/components/AC-VideoTheBot";
 export default {
   name: "ac-manual-bot",
+  components: { AcVideoTheBot },
   data() {
     return {
       descManual: [
@@ -106,7 +109,11 @@ export default {
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
+  background: #fff;
+  border-radius: 60px;
+  padding: 80px 56px 56px 56px;
   .manual__content {
+    margin-bottom: 16px;
     &-title {
       font-weight: 800;
       font-size: $h1-font-size;
@@ -121,6 +128,8 @@ export default {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding: 40px;
+        background: #d9d9d9;
+        border-radius: 48px;
         &__text {
           &-number {
             max-width: 72px;
@@ -156,7 +165,7 @@ export default {
 @media (max-width: 1240px) {
   .manual__wrapper {
     max-width: 1024px;
-    margin: 0 auto;
+    margin-bottom: 16px;
     .manual__content {
       &-title {
         font-size: $h1-font-size - 28px;
@@ -189,27 +198,30 @@ export default {
   .manual__wrapper {
     max-width: 768px;
     padding: 12px 24px;
-    margin: 0;
     .manual__content {
       &-title {
         h1 {
           font-weight: 800;
           font-size: $h1-font-size - 56px;
+          line-height: 78px;
         }
       }
       &__desc {
-        &__text {
-          &-number {
-            max-width: 52px;
-            padding: 10px 7px;
-            span {
-              font-size: $small-font-size - 7px;
+        &__column {
+          padding: 20px 20px 10px 20px;
+          &__text {
+            &-number {
+              max-width: 52px;
+              padding: 10px 7px;
+              span {
+                font-size: $small-font-size - 7px;
+              }
             }
-          }
-          &-description {
-            font-size: $base-font-size - 10px;
-            line-height: $base-line-height -6px;
-            color: #565656;
+            &-description {
+              font-size: $base-font-size - 10px;
+              line-height: $base-line-height -6px;
+              color: #565656;
+            }
           }
         }
       }
@@ -218,30 +230,13 @@ export default {
 }
 @media (max-width: 768px) {
   .manual__wrapper {
-    max-width: 512px;
-    margin: 0;
+    max-width: 768px;
     .manual__content {
       &-title {
         h1 {
           font-weight: 800;
-          font-size: $h1-font-size - 74px;
-          line-height: $h1-line-height - 44px;
-        }
-      }
-    }
-  }
-}
-@media (max-width: 623px) {
-  .manual__wrapper {
-    max-width: 360px;
-    margin: 0;
-    display: flex;
-    .manual__content {
-      &-title {
-        h1 {
-          font-weight: 800;
-          font-size: $h1-font-size - 94px;
-          line-height: $h1-line-height - 64px;
+          font-size: $h1-font-size - 85px;
+          line-height: $h1-line-height - 65px;
         }
       }
       &__desc {
@@ -251,9 +246,9 @@ export default {
         display: block;
         margin-bottom: 60px;
         &__column {
-          display: grid;
-          grid-template-columns: 1fr;
-          padding: 24px;
+          padding: 24px 30px;
+          background: #d9d9d9;
+          border-radius: 60px;
           &__text {
             &-number {
               max-width: 52px;
@@ -278,6 +273,20 @@ export default {
             align-items: center;
             justify-content: center;
           }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 512px) {
+  .manual__wrapper {
+    max-width: 512px;
+    .manual__content {
+      &-title {
+        h1 {
+          font-weight: 800;
+          font-size: $h1-font-size - 94px;
+          line-height: $h1-line-height - 64px;
         }
       }
     }

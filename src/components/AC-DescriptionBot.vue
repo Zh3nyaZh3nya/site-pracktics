@@ -7,29 +7,28 @@
           в вашем<br />
           смартфоне
         </h1>
-        <div class="description__content-title-message">
-          <span>телеграм-бот</span>
-        </div>
       </div>
       <div class="description__content__column">
         <div class="description__content__column__left">
           <div class="description__content__column__left-subtitle">
-            <span
-              >Бот помогает следить за техническим состоянием вашего автомобиля
-              <br />
+            <span>
+              Бот помогает следить за техническим <br />
+              состоянием вашего автомобиля <br />
               и сообщит о необходимости<br />
-              сервисного обслуживания</span
-            >
-            <div class="description__content__column__left-message">
+              сервисного обслуживания
+            </span>
+            <p>
               <img
                 src="@/assets/images/message.png"
                 alt="и не только об этом"
               />
+            </p>
+            <p>
               <img
                 src="@/assets/images/adaptive/AdaptivMessage.png"
                 alt="и не только об этом"
               />
-            </div>
+            </p>
           </div>
           <div class="description__content__column__left-btn">
             <ac-button id="green-button"><span>Хочу купить</span></ac-button>
@@ -59,10 +58,14 @@ export default {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  z-index: -1;
+  background: #fff;
+  z-index: 1;
+  padding: 56px;
+  border-radius: 60px;
+  margin-bottom: 16px;
   .description__content {
-    margin-bottom: 225px;
-    padding: 56px;
+    margin-top: 80px;
+    margin-bottom: 84px;
     &-title {
       font-weight: 800;
       font-size: $h1-font-size;
@@ -73,10 +76,11 @@ export default {
       }
     }
     &__column {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
+      display: flex;
+      flex-wrap: wrap;
       &__left {
         position: relative;
+        flex-basis: 770px;
         &-subtitle {
           margin-bottom: 60px;
           span {
@@ -85,18 +89,17 @@ export default {
             line-height: $base-line-height;
             color: #565656;
           }
+          p {
+            text-align: right;
+            margin-right: 100px;
+          }
+          p:nth-child(3) {
+            display: none;
+          }
         }
         &-btn {
           #green-button {
             padding: 52px 108px;
-          }
-        }
-        &-message {
-          right: 50px;
-          top: 175px;
-          position: absolute;
-          img:nth-child(2) {
-            display: none;
           }
         }
       }
@@ -121,51 +124,26 @@ export default {
           height: 790px;
           z-index: 2;
         }
-        position: relative;
-        &-message {
-          position: absolute;
-          z-index: 2;
-          padding: 25px 22px;
-          background: $blue-color;
-          border-radius: 44px;
-          transform: rotate(5.17deg);
-          top: -240px;
-          left: -130px;
-          span {
-            color: #ffffff;
-          }
-        }
         &-img {
           position: absolute;
           top: -250px;
-          img:nth-child(2) {
-            display: none;
-          }
         }
       }
     }
   }
 }
-@media (max-width: 1124px) {
+@media (max-width: 1360px) {
   .description__wrapper {
-    max-width: 1024px;
-    margin: 0;
+    max-width: 1360px;
     .description__content {
-      padding: 56px;
-      &-title {
-        font-size: $h1-font-size - 38px;
-      }
       &__column {
-        grid-template-columns: 550px 400px;
         &__left {
+          flex-basis: 690px;
           &-subtitle {
             span {
-              font-size: $base-font-size - 12px;
+              font-size: $base-font-size - 13px;
               line-height: $base-line-height;
             }
-          }
-          &-message {
-            top: 190px;
           }
           &-btn {
             #green-button {
@@ -177,155 +155,226 @@ export default {
     }
   }
 }
-@media (max-width: 952px) {
+@media (max-width: 1240px) {
   .description__wrapper {
-    max-width: 952px;
+    max-width: 1024px;
     .description__content {
       &-title {
-        font-size: $h1-font-size - 58px;
-        line-height: $h1-line-height - 20px;
+        font-size: $h1-font-size - 50px;
+        line-height: $h1-line-height - 15px;
       }
       &__column {
-        grid-template-columns: 2fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
         &__left {
-          &-message {
-            top: 170px;
+          position: relative;
+          flex-basis: 450px;
+          &-subtitle {
+            margin-bottom: 60px;
+            span {
+              font-weight: 500;
+              font-size: $base-font-size - 14px;
+              line-height: $base-line-height;
+              color: #565656;
+            }
+            p {
+              text-align: right;
+              padding-right: 0px;
+            }
+            p:nth-child(3) {
+              display: none;
+            }
+          }
+          &-btn {
+            #green-button {
+              padding: 36px 150px;
+              margin-bottom: 32px;
+            }
           }
         }
         &__right {
-          display: block;
-          &-img img {
-            width: 300px;
+          position: relative;
+          :before {
+            left: -140px;
+          }
+          :after {
+            position: absolute;
+            left: 30px;
           }
         }
       }
     }
   }
 }
-@media (max-width: 864px) {
+@media (max-width: 1024px) {
   .description__wrapper {
+    max-width: 767px;
     .description__content {
-      &__column {
-        &__left {
-          &-message {
-            top: 200px;
-          }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 768px) {
-  .description__wrapper {
-    max-width: 768px;
-    margin: 0;
-    padding: 32px 20px;
-    .description__content {
+      margin-bottom: 0;
       &-title {
         position: relative;
-        width: 500px;
-        height: 210px;
-        h1 {
-          font-weight: 800;
-          font-size: $h2-font-size - 28px;
-          line-height: 70px;
-        }
-        &-message {
+        :after {
           display: block;
+          content: "";
+          background: url("@/assets/images/telegramBot.png") no-repeat;
+          width: 220px;
+          height: 108px;
           position: absolute;
-          z-index: 2;
-          background: $blue-color;
-          border-radius: 44px;
-          transform: rotate(5.17deg);
-          font-size: 28px;
-          font-weight: 500;
-          padding: 23px 23px;
-          top: 80px;
+          top: 125px;
           right: 0px;
-          color: #fff;
-          line-height: 100%;
         }
       }
       &__column {
         display: flex;
         flex-direction: column;
         &__left {
-          max-width: 660px;
-          height: 192px;
+          flex-basis: 400px;
+          &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #green-button {
+              padding: 16px 130px;
+            }
+          }
+          &-subtitle {
+            margin-bottom: 50px;
+            span {
+              font-size: $base-font-size - 7px;
+            }
+          }
+        }
+        &__right {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &-img {
+            position: static;
+          }
+          :after {
+            position: static;
+          }
+          :before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .description__wrapper {
+    padding: 32px 20px;
+    .description__content {
+      &-title {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        :after {
+          top: 80px;
+          right: -15px;
+        }
+        h1 {
+          font-weight: 800;
+          font-size: $h2-font-size - 43px;
+          line-height: 80px;
+        }
+      }
+      &__column {
+        display: flex;
+        flex-direction: column;
+        &__left {
+          flex-basis: 400px;
+          &-btn {
+            #green-button {
+              padding: 16px 130px;
+            }
+          }
+          &-subtitle {
+            margin-bottom: 50px;
+            span {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: $small-font-size - 10px;
+            }
+            p {
+              text-align: center;
+              margin-right: 0;
+            }
+          }
+        }
+        &__right {
+          :before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 512px) {
+  .description__wrapper {
+    max-width: 512px;
+    .description__content {
+      &-title {
+        display: block;
+        :after {
+          background: url("@/assets/images/adaptive/adaptivTelegramBot.png")
+            no-repeat;
+          top: 55px;
+          left: 200px;
+          width: 120px;
+          height: 50px;
+        }
+        h1 {
+          font-weight: 800;
+          font-size: $h2-font-size - 49px;
+          line-height: 50px;
+        }
+      }
+      &__column {
+        display: flex;
+        flex-direction: column;
+        &__left {
+          max-width: 320px;
+          flex-basis: 100px;
           &-btn {
             #green-button {
               padding: 16px 100px;
             }
           }
           &-subtitle {
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             span {
-              font-size: $small-font-size - 4px;
+              display: block;
+              font-size: $small-font-size - 14px;
+              line-height: 28px;
             }
-          }
-          &-message {
-            top: 110px;
-            right: 0px;
-          }
-        }
-        &__right {
-          display: none;
-        }
-      }
-    }
-  }
-}
-@media (max-width: 536px) {
-  .description__wrapper {
-    max-width: 512px;
-    margin: 0;
-    .description__content {
-      &-title {
-        width: 300px;
-        height: 150px;
-        h1 {
-          font-weight: 800;
-          font-size: $base-font-size - 2px;
-          line-height: $small-line-height + 8px;
-        }
-        &-message {
-          font-size: 18px;
-          padding: 14px 14px;
-          top: 60px;
-          right: -25px;
-          line-height: 100%;
-        }
-      }
-      &__column {
-        &__left {
-          &-subtitle {
-            span {
-              font-weight: 500;
-              font-size: 19px;
-              line-height: 24px;
-            }
-          }
-          &-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          &-message {
-            position: relative;
-            top: 0;
-            width: 360px;
-            img:nth-child(1) {
+            p:nth-child(2) {
               display: none;
             }
-            img:nth-child(2) {
-              position: absolute;
-              right: 30px;
+            p:nth-child(3) {
               display: block;
+              text-align: right;
             }
           }
         }
         &__right {
-          display: none;
+          &-img {
+            :before {
+              display: none;
+            }
+          }
+          :after {
+            content: "";
+            background: url("@/assets/images/adaptive/adaptivDevice.png")
+              no-repeat;
+            width: 270px;
+            height: 536px;
+            z-index: 2;
+          }
         }
       }
     }

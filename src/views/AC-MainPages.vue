@@ -1,9 +1,8 @@
 <template>
-  <ac-header />
+  <ac-header :scrollToJob="scrollToJob" />
   <div class="main__pages">
     <ac-description-bot />
     <ac-manual-bot />
-    <ac-video-the-bot />
     <ac-auto-consultant />
     <ac-questions />
     <a-c-buy-subscription />
@@ -14,7 +13,6 @@
 <script>
 import AcDescriptionBot from "@/components/AC-DescriptionBot";
 import AcManualBot from "@/components/AC-ManualBot";
-import AcVideoTheBot from "@/components/AC-VideoTheBot";
 import AcAutoConsultant from "@/components/AC-AutoConsultant";
 import AcQuestions from "@/components/AC-Questions";
 import ACBuySubscription from "@/components/AC-BuySubscription";
@@ -23,10 +21,23 @@ export default {
   components: {
     AcQuestions,
     AcAutoConsultant,
-    AcVideoTheBot,
     AcManualBot,
     AcDescriptionBot,
     ACBuySubscription,
   },
 };
 </script>
+
+<style lang="scss">
+#app {
+  background: #d9d9d9;
+}
+.main__pages {
+  padding: 0 40px;
+}
+@media (max-width: 512px) {
+  .main__pages {
+    padding: 0;
+  }
+}
+</style>

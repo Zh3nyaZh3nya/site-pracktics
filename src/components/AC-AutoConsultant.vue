@@ -29,6 +29,7 @@ export default {
   background: url("@/assets/images/AutoConsultant.png") no-repeat;
   background-size: 100% 100%;
   text-align: center;
+  margin-bottom: 16px;
   .consultant__content {
     padding: 100px 82px 92px 83px;
     &-title {
@@ -48,11 +49,9 @@ export default {
 }
 @media (max-width: 1360px) {
   .consultant__wrapper {
-    max-width: 1024px;
-    width: 100%;
+    max-width: 1240px;
     .consultant__content {
       margin-bottom: 16px;
-      padding: 50px 40px;
       &-title {
         font-weight: 800;
         font-size: $h2-font-size - 16px;
@@ -69,39 +68,29 @@ export default {
     }
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
   .consultant__wrapper {
-    max-width: 960px;
-    width: 100%;
+    max-width: 1024px;
     .consultant__content {
-      margin-bottom: 16px;
-      padding: 30px 20px;
       &-title {
         font-weight: 800;
         font-size: $h2-font-size - 32px;
         line-height: $h2-line-height - 32px;
         color: #fff;
-        margin-bottom: 20px;
       }
       &-subtitle {
-        font-size: $base-font-size - 20px;
-        line-height: $base-line-height - 20px;
+        font-size: $base-font-size - 15px;
+        line-height: $base-line-height - 15px;
         color: #fff;
-        margin-bottom: 60px;
       }
     }
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .consultant__wrapper {
     max-width: 768px;
-    width: 100%;
-    background-size: 100% 100%;
     .consultant__content {
-      margin-bottom: 16px;
-      padding: 40px;
       &-title {
-        margin-bottom: 20px;
         h2 {
           font-weight: 800;
           font-size: $h2-font-size - 50px;
@@ -110,7 +99,6 @@ export default {
         }
       }
       &-subtitle {
-        margin-bottom: 20px;
         span {
           font-size: $base-font-size - 18px;
           line-height: $base-line-height - 18px;
@@ -122,27 +110,40 @@ export default {
 }
 @media (max-width: 768px) {
   .consultant__wrapper {
-    max-width: 512px;
-    width: 100%;
-    background-size: 100% 100%;
+    max-width: 768px;
     .consultant__content {
-      margin-bottom: 16px;
-      padding: 20px;
+      padding: 40px;
       &-title {
-        margin-bottom: 20px;
         h2 {
-          font-weight: 800;
           font-size: $h2-font-size - 53px;
           line-height: $h2-line-height - 53px;
-          color: #fff;
         }
       }
       &-subtitle {
-        margin-bottom: 20px;
         span {
           font-size: $base-font-size - 20px;
           line-height: $base-line-height - 25px;
-          color: #fff;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 512px) {
+  .consultant__wrapper {
+    max-width: 512px;
+    .consultant__content {
+      padding: 10px;
+      &-title {
+        h2 {
+          font-size: $h2-font-size - 57px;
+          line-height: $h2-line-height - 57px;
+        }
+      }
+      &-subtitle {
+        margin-bottom: 30px;
+        span {
+          font-size: $base-font-size - 25px;
+          line-height: $base-line-height - 25px;
         }
       }
     }

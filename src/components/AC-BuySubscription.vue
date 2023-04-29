@@ -39,6 +39,8 @@ export default {
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
+  background: #fff;
+  border-radius: 60px;
   .subscription__content {
     margin-bottom: 16px;
     &__column {
@@ -48,6 +50,8 @@ export default {
       padding: 98px 45px 65px 78px;
       &__left {
         padding: 48px 58.5px;
+        background: #d9d9d9;
+        border-radius: 48px;
         &-title {
           display: grid;
           font-weight: 900;
@@ -68,7 +72,7 @@ export default {
             background: #292929;
             border-radius: 60px;
             color: #fff;
-            padding: 12px;
+            padding: 15px;
             font-weight: 500;
             font-size: $base-font-size + 4px;
             line-height: $base-line-height + 8px;
@@ -98,37 +102,29 @@ export default {
         transform: rotate(6.04deg);
         position: absolute;
         right: 80px;
-        bottom: 30px;
+        bottom: 0px;
       }
     }
   }
 }
 @media (max-width: 1360px) {
   .subscription__wrapper {
-    max-width: 786px;
-    width: 100%;
-    margin: 0 auto;
+    max-width: 1360px;
     .subscription__content {
       &__column {
-        &__left {
-          padding: 0;
-        }
         &__right {
-          display: none;
+          right: 60px;
         }
       }
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1240px) {
   .subscription__wrapper {
-    max-width: 360px;
-    margin: 0 auto;
+    max-width: 1024px;
     .subscription__content {
       &__column {
-        padding: 20px;
         &__left {
-          padding: 0;
           &-title {
             font-size: 90px;
             line-height: 80px;
@@ -163,6 +159,124 @@ export default {
             &-btn {
               #green-button {
                 padding: 21px 117px;
+              }
+            }
+          }
+        }
+        &__right {
+          display: block;
+          img {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .subscription__wrapper {
+    max-width: 768px;
+    .subscription__content {
+      &__column {
+        padding: 51px 0px 38px 22px;
+        &__right {
+          right: 0px;
+          img {
+            width: 240px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .subscription__wrapper {
+    .subscription__content {
+      &__column {
+        padding: 22px 0px 22px 22px;
+        &__left {
+          padding: 25px 25px;
+          &-title {
+            font-size: 60px;
+            line-height: 30px;
+            span:nth-child(2) {
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
+          &__price {
+            &-disc {
+              padding: 10px 20px;
+              font-size: $base-font-size - 22px;
+              line-height: $base-line-height - 18px;
+            }
+            &-full {
+              span:nth-child(1) {
+                font-weight: 500;
+                font-size: $base-font-size - 27px;
+                line-height: $base-line-height - 27px;
+                text-decoration-line: line-through;
+              }
+              span:nth-child(2) {
+                font-weight: 500;
+                font-size: $small-font-size - 21px;
+                line-height: $small-line-height - 21px;
+                color: #6c6c6c;
+              }
+            }
+            &-btn {
+              #green-button {
+                padding: 21px 70px;
+              }
+            }
+          }
+        }
+        &__right {
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 512px) {
+  .subscription__wrapper {
+    max-width: 512px;
+    .subscription__content {
+      &__column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 27px;
+        &__left {
+          padding: 25px 25px;
+          &-title {
+            font-size: 80px;
+            line-height: 80px;
+            span:nth-child(2) {
+              font-size: 28px;
+              line-height: 32px;
+            }
+          }
+          &__price {
+            &-disc {
+              font-size: $base-font-size - 20px;
+              line-height: $base-line-height - 20px;
+            }
+            &-full {
+              span:nth-child(1) {
+                font-size: $base-font-size - 20px;
+                line-height: $base-line-height - 20px;
+              }
+              span:nth-child(2) {
+                font-size: $small-font-size - 20px;
+                line-height: $small-line-height - 20px;
+              }
+            }
+            &-btn {
+              #green-button {
+                padding: 21px 110px;
               }
             }
           }

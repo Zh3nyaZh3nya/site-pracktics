@@ -45,7 +45,6 @@ export default {
   margin: 0 auto;
   .video__content {
     position: relative;
-    margin-bottom: 72px;
     video {
       max-width: 1240px;
       display: flex;
@@ -99,7 +98,23 @@ export default {
     max-width: 768px;
     .video__content {
       video {
-        max-width: 360px;
+        max-width: 768px;
+      }
+    }
+  }
+}
+@media (max-width: 512px) {
+  .video__wrapper {
+    max-width: 512px;
+    max-height: 355px;
+    .video__content {
+      position: static;
+      video {
+        width: 320px;
+        margin: 0px auto;
+      }
+      button {
+        display: none;
       }
     }
   }

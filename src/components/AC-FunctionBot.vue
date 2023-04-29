@@ -64,8 +64,8 @@ export default {
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
+  padding-top: 84px;
   .function__content {
-    margin-bottom: 96px;
     &-title {
       text-align: center;
       font-weight: 700;
@@ -85,7 +85,7 @@ export default {
           justify-content: center;
           min-height: 268px;
           text-align: center;
-          background: #f0f0f0;
+          background: #d9d9d9;
           border-radius: 52px;
           margin-bottom: 20px;
         }
