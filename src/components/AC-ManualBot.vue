@@ -112,8 +112,8 @@ export default {
   background: #fff;
   border-radius: 60px;
   padding: 80px 56px 56px 56px;
+  margin-bottom: 16px;
   .manual__content {
-    margin-bottom: 16px;
     &-title {
       font-weight: 800;
       font-size: $h1-font-size;

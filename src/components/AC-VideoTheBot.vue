@@ -108,13 +108,12 @@ export default {
     max-width: 512px;
     max-height: 355px;
     .video__content {
-      position: static;
       video {
         width: 320px;
         margin: 0px auto;
       }
       button {
-        display: none;
+        display: block;
       }
     }
   }
