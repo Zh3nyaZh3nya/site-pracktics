@@ -1,5 +1,5 @@
 <template>
-  <section class="manual__wrapper">
+  <section class="manual__wrapper" ref="Job">
     <div class="manual__content">
       <div class="manual__content-title">
         <h1>Как работает АвтоКонсультант?</h1>

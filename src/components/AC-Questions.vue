@@ -1,5 +1,5 @@
 <template>
-  <section class="questions__wrapper">
+  <section class="questions__wrapper" ref="Questions">
     <div class="questions__content">
       <div class="questions__content-title">
         <h2>Вопросы и ответы</h2>

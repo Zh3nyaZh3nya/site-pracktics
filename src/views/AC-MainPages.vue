@@ -1,10 +1,13 @@
 <template>
-  <ac-header :scrollToJob="scrollToJob" />
+  <ac-header
+    @scrollToJob="scrollToJob"
+    @scrollToQuestions="scrollToQuestions"
+  />
   <div class="main__pages">
     <ac-description-bot />
-    <ac-manual-bot />
+    <ac-manual-bot ref="Job" />
     <ac-auto-consultant />
-    <ac-questions />
+    <ac-questions ref="Questions" />
     <a-c-buy-subscription />
   </div>
   <ac-footer />
@@ -24,6 +27,27 @@ export default {
     AcManualBot,
     AcDescriptionBot,
     ACBuySubscription,
+  },
+  data() {
+    return {
+      scrollPosition: 0,
+    };
+  },
+  methods: {
+    scrollToJob() {
+      this.scrollPosition = this.$refs.Job.$el.offsetTop - 90;
+      window.scrollTo({
+        top: this.scrollPosition,
+        behavior: "smooth",
+      });
+    },
+    scrollToQuestions() {
+      this.scrollPosition = this.$refs.Questions.$el.offsetTop - 110;
+      window.scrollTo({
+        top: this.scrollPosition,
+        behavior: "smooth",
+      });
+    },
   },
 };
 </script>
