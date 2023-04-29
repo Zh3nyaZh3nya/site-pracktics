@@ -1,5 +1,9 @@
 # practica
 
+```
+Vue 3 (Option Api, SCSS)
+```
+
 ## Project setup
 ```
 npm install
