@@ -141,4 +141,29 @@ export default {
     }
   }
 }
+@media (max-width: 359px) {
+  .function__wrapper {
+    max-width: 270px;
+    padding-top: 50px;
+    margin-bottom: 30px;
+    .function__content {
+      &-title {
+        h2 {
+          font-weight: 800;
+          font-size: $h2-font-size - 33px;
+          line-height: $h2-line-height - 38px;
+        }
+      }
+      &__reminders {
+        grid-template-columns: 1fr;
+        &__option {
+          max-width: 270px;
+          &-img {
+            background: #e5dfdf;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

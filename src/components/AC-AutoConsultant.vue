@@ -149,4 +149,28 @@ export default {
     }
   }
 }
+@media (max-width: 359px) {
+  .consultant__wrapper {
+    max-width: 359px;
+    .consultant__content {
+      padding: 5px;
+      &-title {
+        margin-bottom: 0;
+        h2 {
+          font-size: 20px;
+        }
+      }
+      &-subtitle {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      &-btn {
+        margin-bottom: 10px;
+        #green-button {
+          padding: 15px 80px;
+        }
+      }
+    }
+  }
+}
 </style>

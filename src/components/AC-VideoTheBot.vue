@@ -118,4 +118,19 @@ export default {
     }
   }
 }
+@media (max-width: 359px) {
+  .video__wrapper {
+    max-width: 270px;
+    max-height: 270px;
+    .video__content {
+      video {
+        width: 270px;
+        margin: 0px auto;
+      }
+      button {
+        display: block;
+      }
+    }
+  }
+}
 </style>

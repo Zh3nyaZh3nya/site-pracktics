@@ -288,4 +288,56 @@ export default {
     }
   }
 }
+@media (max-width: 359px) {
+  .subscription__wrapper {
+    max-width: 280px;
+    .subscription__content {
+      &__column {
+        padding: 22px 0px;
+        &__left {
+          padding: 25px 25px;
+          &-title {
+            font-size: 60px;
+            line-height: 30px;
+            span:nth-child(2) {
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
+          &__price {
+            &-disc {
+              padding: 10px 20px;
+              font-size: $base-font-size - 22px;
+              line-height: $base-line-height - 18px;
+            }
+            &-full {
+              span:nth-child(1) {
+                font-weight: 500;
+                font-size: $base-font-size - 27px;
+                line-height: $base-line-height - 27px;
+                text-decoration-line: line-through;
+              }
+              span:nth-child(2) {
+                font-weight: 500;
+                font-size: $small-font-size - 21px;
+                line-height: $small-line-height - 21px;
+                color: #6c6c6c;
+              }
+            }
+            &-btn {
+              #green-button {
+                padding: 21px 70px;
+              }
+            }
+          }
+        }
+        &__right {
+          img {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>

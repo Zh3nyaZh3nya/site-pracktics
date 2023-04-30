@@ -380,4 +380,35 @@ export default {
     }
   }
 }
+@media (max-width: 359px) {
+  .description__wrapper {
+    max-width: 279px;
+    padding: 1px;
+    .description__content {
+      &-title {
+        margin-bottom: 10px;
+        :after {
+          background: url("@/assets/images/adaptive/adaptivTelegramBot.png")
+            no-repeat;
+          top: 40px;
+          left: 120px;
+        }
+        h1 {
+          font-weight: 800;
+          font-size: $h2-font-size - 60px;
+          line-height: 40px;
+        }
+      }
+      &__column {
+        &__left {
+          &-btn {
+            #green-button {
+              padding: 16px 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

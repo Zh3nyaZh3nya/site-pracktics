@@ -292,4 +292,40 @@ export default {
     }
   }
 }
+@media (max-width: 359px) {
+  .manual__wrapper {
+    max-width: 512px;
+    padding: 34px 0px;
+    .manual__content {
+      &-title {
+        margin-left: 10px;
+        margin-bottom: 30px;
+        h1 {
+          font-weight: 800;
+          font-size: $h1-font-size - 100px;
+          line-height: $h1-line-height - 80px;
+        }
+      }
+      &__desc {
+        &__column {
+          padding: 18px 14px;
+          &__text {
+            &-number {
+              max-width: 52px;
+              padding: 10px 7px;
+              span {
+                font-size: $small-font-size - 7px;
+              }
+            }
+            &-description {
+              font-size: $base-font-size - 10px;
+              line-height: $base-line-height -6px;
+              color: #565656;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

@@ -185,4 +185,35 @@ export default {
     }
   }
 }
+@media (max-width: 359px) {
+  .header__wrapper {
+    max-width: 280px;
+    padding: 5px;
+    .header__row {
+      &-title {
+        span {
+          font-size: 26px;
+        }
+      }
+      .header__burger {
+        .closedBurger {
+          .burger__row__nav {
+            max-width: 280px;
+            #green-button {
+              padding: 10px 60px;
+              span {
+                font-size: 20px;
+              }
+            }
+            span {
+              font-weight: 800;
+              font-size: $small-font-size - 6px;
+              line-height: $small-line-height + 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>

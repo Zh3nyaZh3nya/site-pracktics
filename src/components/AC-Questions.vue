@@ -322,4 +322,46 @@ export default {
     }
   }
 }
+@media (max-width: 359px) {
+  .questions__wrapper {
+    max-width: 280px;
+    .questions__content {
+      padding: 24px 0;
+      &-title {
+        h2 {
+          font-weight: 800;
+          font-size: $h1-font-size - 90px;
+          line-height: $h1-line-height - 55px;
+        }
+      }
+      &__list {
+        padding: 36px 6px 10px 6px;
+        &__item {
+          &__header {
+            &-title {
+              font-weight: 400;
+              font-size: $small-font-size - 14px;
+              line-height: $small-font-size;
+            }
+            &-btn {
+              button {
+                width: 44px;
+                height: 44px;
+                img {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+            }
+          }
+          &-subtitle {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
