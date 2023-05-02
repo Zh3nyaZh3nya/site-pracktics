@@ -111,9 +111,11 @@ export default {
 @media (max-width: 768px) {
   .consultant__wrapper {
     max-width: 768px;
+    border-radius: 32px;
     .consultant__content {
       padding: 40px;
       &-title {
+        margin-bottom: 16px;
         h2 {
           font-size: $h2-font-size - 53px;
           line-height: $h2-line-height - 53px;
@@ -125,12 +127,19 @@ export default {
           line-height: $base-line-height - 25px;
         }
       }
+      &-btn {
+        margin-bottom: 52px;
+        #green-button {
+          padding: 21px 67px;
+        }
+      }
     }
   }
 }
 @media (max-width: 512px) {
   .consultant__wrapper {
     max-width: 512px;
+    background-size: 150% 100%;
     .consultant__content {
       padding: 10px;
       &-title {
@@ -142,8 +151,8 @@ export default {
       &-subtitle {
         margin-bottom: 30px;
         span {
-          font-size: $base-font-size - 25px;
-          line-height: $base-line-height - 25px;
+          font-size: $base-font-size - 20px;
+          line-height: $base-line-height - 20px;
         }
       }
     }
@@ -155,17 +164,19 @@ export default {
     .consultant__content {
       padding: 5px;
       &-title {
-        margin-bottom: 0;
+        margin-bottom: 20px;
         h2 {
-          font-size: 20px;
+          font-size: 25px;
         }
       }
       &-subtitle {
-        font-size: 15px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        span {
+          font-size: 16px;
+        }
       }
       &-btn {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         #green-button {
           padding: 15px 80px;
         }

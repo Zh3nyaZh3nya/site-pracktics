@@ -64,4 +64,9 @@ export default {
     padding: 1px;
   }
 }
+@media (max-width: 360px) {
+  .main__pages {
+    padding: 1px;
+  }
+}
 </style>

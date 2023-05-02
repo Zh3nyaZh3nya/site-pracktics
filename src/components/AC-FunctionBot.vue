@@ -64,7 +64,7 @@ export default {
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 84px;
+  padding-top: 144px;
   .function__content {
     &-title {
       text-align: center;
@@ -99,6 +99,11 @@ export default {
     }
   }
 }
+@media (max-width: 1240px) {
+  .function__wrapper {
+    padding: 0;
+  }
+}
 @media (max-width: 1024px) {
   .function__wrapper {
     max-width: 768px;
@@ -126,17 +131,14 @@ export default {
     max-width: 360px;
     .function__content {
       &-title {
+        margin-bottom: 32px;
         h2 {
           font-weight: 800;
+          font-size: 37px;
         }
       }
       &__reminders {
         grid-template-columns: 1fr;
-        &__option {
-          &-img {
-            background: #e5dfdf;
-          }
-        }
       }
     }
   }
@@ -158,9 +160,6 @@ export default {
         grid-template-columns: 1fr;
         &__option {
           max-width: 270px;
-          &-img {
-            background: #e5dfdf;
-          }
         }
       }
     }

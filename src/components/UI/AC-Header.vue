@@ -89,13 +89,12 @@ export default {
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
-  padding: 28px 80px;
+  padding: 28px 52px;
   .header__row {
-    margin-top: 30px;
+    margin: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 35px;
     &-title {
       z-index: $z-index-header;
       span {
@@ -135,11 +134,11 @@ export default {
     padding: 10px 20px;
   }
 }
-@media (max-width: 902px) {
+@media (max-width: 1024px) {
   .header__wrapper {
-    max-width: 902px;
+    max-width: 768px;
     margin: 0 auto;
-    position: fixed;
+    position: relative;
     z-index: $z-index-header;
     background: #d9d9d9;
     .header__row {
@@ -151,11 +150,17 @@ export default {
         display: block;
         position: relative;
         z-index: $z-index-burger;
+        background: #fff;
+        padding: 4px 6px 7px 6px;
         .closedBurger {
           position: relative;
           button {
             position: relative;
             z-index: $z-index-burger;
+          }
+          img {
+            background: #fff;
+            padding: 4px;
           }
           .burger__row__nav {
             position: fixed;
@@ -167,7 +172,7 @@ export default {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #fff;
+            background: #d9d9d9;
             button {
               margin-bottom: 45px;
             }
@@ -185,16 +190,22 @@ export default {
     }
   }
 }
-@media (max-width: 359px) {
+@media (max-width: 512px) {
   .header__wrapper {
-    max-width: 280px;
-    padding: 5px;
     .header__row {
       &-title {
         span {
           font-size: 26px;
         }
       }
+    }
+  }
+}
+@media (max-width: 359px) {
+  .header__wrapper {
+    max-width: 280px;
+    padding: 5px;
+    .header__row {
       .header__burger {
         .closedBurger {
           .burger__row__nav {

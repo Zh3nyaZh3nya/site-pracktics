@@ -19,7 +19,7 @@ export default {
   background: black;
   span {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 28px;
     line-height: 100%;
   }
 }
@@ -28,5 +28,10 @@ export default {
   color: #000;
   background: $green-color;
   border-radius: 48px;
+}
+@media (max-width: 512px) {
+  #green-button {
+    border-radius: 20px;
+  }
 }
 </style>

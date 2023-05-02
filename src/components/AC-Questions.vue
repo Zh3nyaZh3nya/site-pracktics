@@ -36,6 +36,7 @@
               <span>{{ question.subtitleQuestions }}</span>
             </div>
           </transition>
+          <hr />
         </div>
       </div>
     </div>
@@ -112,9 +113,12 @@ export default {
           }
         }
         &-subtitle {
-          font-weight: 400;
-          font-size: 24px;
-          line-height: 28px;
+          span {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+          }
+          margin-bottom: 26px;
         }
       }
     }
@@ -190,9 +194,10 @@ export default {
             }
           }
           &-subtitle {
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 28px;
+            span {
+              font-size: 24px;
+              line-height: 28px;
+            }
           }
         }
       }
@@ -218,9 +223,10 @@ export default {
             }
           }
           &-subtitle {
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 28px;
+            span {
+              font-size: 24px;
+              line-height: 28px;
+            }
           }
         }
       }
@@ -250,9 +256,10 @@ export default {
             }
           }
           &-subtitle {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 20px;
+            span {
+              font-size: 16px;
+              line-height: 20px;
+            }
           }
         }
       }
@@ -262,6 +269,13 @@ export default {
 @media (max-width: 768px) {
   .questions__wrapper {
     .questions__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &-title {
+        max-width: 196px;
+      }
       &__list {
         &__item {
           &__header {
@@ -272,9 +286,10 @@ export default {
             }
           }
           &-subtitle {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
+            span {
+              font-size: 14px;
+              line-height: 20px;
+            }
           }
         }
       }
@@ -284,6 +299,7 @@ export default {
 @media (max-width: 512px) {
   .questions__wrapper {
     max-width: 512px;
+    border-radius: 32px;
     .questions__content {
       &-title {
         h2 {
@@ -294,6 +310,7 @@ export default {
       }
       &__list {
         padding: 36px 16px 10px 16px;
+        border-radius: 24px;
         &__item {
           &__header {
             &-title {
@@ -313,9 +330,10 @@ export default {
             }
           }
           &-subtitle {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 20px;
+            span {
+              font-size: 16px;
+              line-height: 20px;
+            }
           }
         }
       }
@@ -326,7 +344,7 @@ export default {
   .questions__wrapper {
     max-width: 280px;
     .questions__content {
-      padding: 24px 0;
+      padding: 24px 12px;
       &-title {
         h2 {
           font-weight: 800;
@@ -335,7 +353,7 @@ export default {
         }
       }
       &__list {
-        padding: 36px 6px 10px 6px;
+        padding: 36px 20px 10px 20px;
         &__item {
           &__header {
             &-title {

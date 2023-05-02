@@ -64,13 +64,14 @@ export default {
   border-radius: 60px;
   margin-bottom: 16px;
   .description__content {
-    margin-top: 80px;
     margin-bottom: 84px;
     &-title {
-      font-weight: 800;
-      font-size: $h1-font-size;
-      line-height: $h1-line-height;
       margin-bottom: 40px;
+      h1 {
+        font-weight: 800;
+        font-size: $h1-font-size;
+        line-height: $h1-line-height;
+      }
       &-message {
         display: none;
       }
@@ -82,16 +83,14 @@ export default {
         position: relative;
         flex-basis: 770px;
         &-subtitle {
-          margin-bottom: 60px;
           span {
             font-weight: 500;
-            font-size: $base-font-size - 8px;
+            font-size: $base-font-size;
             line-height: $base-line-height;
             color: #565656;
           }
           p {
             text-align: right;
-            margin-right: 100px;
           }
           p:nth-child(3) {
             display: none;
@@ -125,8 +124,10 @@ export default {
           z-index: 2;
         }
         &-img {
+          display: block;
           position: absolute;
           top: -250px;
+          left: 55px;
         }
       }
     }
@@ -136,12 +137,13 @@ export default {
   .description__wrapper {
     max-width: 1360px;
     .description__content {
+      margin-bottom: 200px;
       &__column {
         &__left {
           flex-basis: 690px;
           &-subtitle {
             span {
-              font-size: $base-font-size - 13px;
+              font-size: $base-font-size - 3px;
               line-height: $base-line-height;
             }
           }
@@ -160,8 +162,10 @@ export default {
     max-width: 1024px;
     .description__content {
       &-title {
-        font-size: $h1-font-size - 50px;
-        line-height: $h1-line-height - 15px;
+        h1 {
+          font-size: $h1-font-size - 50px;
+          line-height: $h1-line-height - 15px;
+        }
       }
       &__column {
         display: flex;
@@ -173,7 +177,7 @@ export default {
             margin-bottom: 60px;
             span {
               font-weight: 500;
-              font-size: $base-font-size - 14px;
+              font-size: $base-font-size - 15px;
               line-height: $base-line-height;
               color: #565656;
             }
@@ -223,6 +227,9 @@ export default {
           top: 125px;
           right: 0px;
         }
+        h1 {
+          font-size: 68px;
+        }
       }
       &__column {
         display: flex;
@@ -248,6 +255,7 @@ export default {
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-bottom: 60px;
           &-img {
             position: static;
           }
@@ -317,9 +325,11 @@ export default {
 @media (max-width: 512px) {
   .description__wrapper {
     max-width: 512px;
+    border-radius: 32px;
     .description__content {
       &-title {
         display: block;
+        margin-bottom: 0;
         :after {
           background: url("@/assets/images/adaptive/adaptivTelegramBot.png")
             no-repeat;
@@ -342,11 +352,12 @@ export default {
           flex-basis: 100px;
           &-btn {
             #green-button {
-              padding: 16px 100px;
+              padding: 16px 78px;
             }
           }
           &-subtitle {
-            margin-bottom: 20px;
+            margin-bottom: 52px;
+            position: relative;
             span {
               display: block;
               font-size: $small-font-size - 14px;
@@ -357,7 +368,9 @@ export default {
             }
             p:nth-child(3) {
               display: block;
-              text-align: right;
+              position: absolute;
+              right: -5px;
+              bottom: -14px;
             }
           }
         }
@@ -383,7 +396,7 @@ export default {
 @media (max-width: 359px) {
   .description__wrapper {
     max-width: 279px;
-    padding: 1px;
+    padding: 20px 1px 1px 5px;
     .description__content {
       &-title {
         margin-bottom: 10px;
@@ -403,7 +416,7 @@ export default {
         &__left {
           &-btn {
             #green-button {
-              padding: 16px 70px;
+              padding: 16px 50px;
             }
           }
         }

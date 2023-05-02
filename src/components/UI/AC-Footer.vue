@@ -47,7 +47,7 @@ export default {
 }
 @media (max-width: 1360px) {
   .footer {
-    max-width: 1096px;
+    max-width: 1240px;
     &__nav {
       padding: 40px 40px;
       span {
@@ -57,9 +57,15 @@ export default {
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1240px) {
+  .footer {
+    max-width: 968px;
+  }
+}
+@media (max-width: 968px) {
   .footer {
     max-width: 768px;
+    border-radius: 32px 32px 0 0;
     &__nav {
       display: grid;
       grid-template-columns: 1fr;

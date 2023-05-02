@@ -9,16 +9,16 @@
         v-for="manual in descManual"
         :key="manual.id"
       >
-        <div class="manual__content__desc__column">
+        <div class="manual__content__desc__column" :class="manual.class">
           <div class="manual__content__desc__column__text">
             <div class="manual__content__desc__column__text-number">
               <span>0{{ manual.id }}</span>
             </div>
             <div class="manual__content__desc__column__text-description">
-              <span>{{ manual.textDesc }}</span>
+              <span v-html="manual.textDesc"></span>
             </div>
           </div>
-          <div class="manual__content__desc__column-img">
+          <div class="manual__content__desc__column-img" :class="manual.class">
             <img :src="require('@/assets/images/' + manual.imgDesc)" alt="" />
           </div>
         </div>
@@ -36,10 +36,13 @@
             <div
               class="adaptive__manual__content__desc__column__text-description"
             >
-              <span>{{ manual.textDesc }}</span>
+              <span v-html="manual.textDesc"></span>
             </div>
           </div>
-          <div class="adaptive__manual__content__desc__column-img">
+          <div
+            class="adaptive__manual__content__desc__column-img"
+            :class="manual.class"
+          >
             <img
               :src="
                 require('@/assets/images/adaptive/' + manual.adaptiveImgDesc)
@@ -65,18 +68,19 @@ export default {
         {
           id: 1,
           textDesc:
-            "Добавляете ваш автомобиль в “Мой гараж” заполнив сервисные данные",
+            "Добавляете ваш<br/> автомобиль в “Мой гараж” заполнив сервисные данные",
           imgDesc: "button.png",
+          class: "classGap",
         },
         {
           id: 2,
-          textDesc: "Ездите на машине как обычно это делаете",
+          textDesc: "Ездите на машине<br/> как обычно это делаете",
           imgDesc: "car.png",
         },
         {
           id: 3,
           textDesc:
-            "Бот подскажет когда надо будет заменить масло, пройти техосмотр и т.д.",
+            "Бот подскажет когда надо будет заменить масло,<br/> пройти техосмотр и т.д.",
           imgDesc: "hand.png",
         },
       ],
@@ -85,10 +89,11 @@ export default {
           id: 1,
           textDesc: "Вводишь сервисные данные своего автомобиля",
           adaptiveImgDesc: "adaptiveButton.png",
+          class: "classPadding",
         },
         {
           id: 2,
-          textDesc: "Ездите на машине как обычно это делаете",
+          textDesc: "Ездите на машине<br/> как обычно это делаете",
           adaptiveImgDesc: "adaptiveCar.png",
         },
         {
@@ -115,8 +120,7 @@ export default {
   margin-bottom: 16px;
   .manual__content {
     &-title {
-      font-weight: 800;
-      font-size: $h1-font-size;
+      font-size: $h1-font-size - 12px;
       line-height: $h1-line-height;
       margin-bottom: 60px;
     }
@@ -127,7 +131,7 @@ export default {
       &__column {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 40px;
+        padding: 40px 0 40px 40px;
         background: #d9d9d9;
         border-radius: 48px;
         &__text {
@@ -155,6 +159,9 @@ export default {
           align-items: center;
           justify-content: center;
         }
+        .classGap {
+          padding-left: 27px;
+        }
       }
     }
     .adaptive__manual__content__desc {
@@ -168,13 +175,11 @@ export default {
     margin-bottom: 16px;
     .manual__content {
       &-title {
-        font-size: $h1-font-size - 28px;
+        font-size: $h1-font-size - 35px;
       }
       &__desc {
         &__column {
-          padding: 0;
-          grid-template-columns: 1fr;
-          row-gap: 28px;
+          padding: 20px 0 20px 20px;
           &__text {
             &-number {
               max-width: 62px;
@@ -184,8 +189,8 @@ export default {
               }
             }
             &-description {
-              font-size: $base-font-size - 7px;
-              line-height: $base-line-height - 6px;
+              font-size: $base-font-size - 14px;
+              line-height: $base-line-height - 12px;
               color: #565656;
             }
           }
@@ -209,6 +214,8 @@ export default {
       &__desc {
         &__column {
           padding: 20px 20px 10px 20px;
+          grid-template-columns: 1fr;
+          row-gap: 24px;
           &__text {
             &-number {
               max-width: 52px;
@@ -248,12 +255,12 @@ export default {
         &__column {
           padding: 24px 30px;
           background: #d9d9d9;
-          border-radius: 60px;
+          border-radius: 40px;
           &__text {
             &-number {
               max-width: 52px;
               background: $green-color;
-              padding: 14px 10px;
+              padding: 14px 13px;
               text-align: center;
               border-radius: 100px;
               margin-bottom: 20px;
@@ -281,12 +288,53 @@ export default {
 @media (max-width: 512px) {
   .manual__wrapper {
     max-width: 512px;
+    padding: 40px 14px;
+    border-radius: 32px;
     .manual__content {
       &-title {
+        margin-bottom: 32px;
         h1 {
           font-weight: 800;
           font-size: $h1-font-size - 94px;
-          line-height: $h1-line-height - 64px;
+          line-height: $h1-line-height - 84px;
+        }
+      }
+      .adaptive__manual__content__desc {
+        display: block;
+        margin-bottom: 32px;
+        &__column {
+          background: #d9d9d9;
+          border-radius: 40px;
+          padding: 24px 0 24px 24px;
+          &__text {
+            &-number {
+              max-width: 52px;
+              background: $green-color;
+              padding: 14px 10px;
+              text-align: center;
+              border-radius: 100px;
+              margin-bottom: 20px;
+              span {
+                font-size: $small-font-size - 7px;
+              }
+            }
+            &-description {
+              font-size: 20px;
+              line-height: 24px;
+              color: #565656;
+              margin-bottom: 20px;
+            }
+          }
+          &-img {
+            padding-right: 24px;
+          }
+          .classPadding {
+            padding: 0;
+            max-width: 500px;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+          }
         }
       }
     }

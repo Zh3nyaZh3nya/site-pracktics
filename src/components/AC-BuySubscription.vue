@@ -206,7 +206,7 @@ export default {
           }
           &__price {
             &-disc {
-              padding: 10px 20px;
+              padding: 10px;
               font-size: $base-font-size - 22px;
               line-height: $base-line-height - 18px;
             }
@@ -243,14 +243,16 @@ export default {
 @media (max-width: 512px) {
   .subscription__wrapper {
     max-width: 512px;
+    border-radius: 32px;
     .subscription__content {
       &__column {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 24px 27px;
+        padding: 24px 20px;
         &__left {
-          padding: 25px 25px;
+          border-radius: 24px;
+          padding: 25px 20px;
           &-title {
             font-size: 80px;
             line-height: 80px;
@@ -276,7 +278,7 @@ export default {
             }
             &-btn {
               #green-button {
-                padding: 21px 110px;
+                padding: 21px 100px;
               }
             }
           }
@@ -295,7 +297,7 @@ export default {
       &__column {
         padding: 22px 0px;
         &__left {
-          padding: 25px 25px;
+          padding: 25px 15px;
           &-title {
             font-size: 60px;
             line-height: 30px;
