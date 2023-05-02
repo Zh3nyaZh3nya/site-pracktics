@@ -1,5 +1,5 @@
 <template>
-  <section class="video__wrapper">
+  <section class="video__wrapper" v-if="videoSource.length">
     <div class="video__content">
       <video
         ref="videoPlayer"
@@ -21,7 +21,7 @@ export default {
   name: "ac-video-the-bot",
   data() {
     return {
-      videoSource: "video.mp4",
+      videoSource: "",
       isPlaying: false,
     };
   },
