@@ -78,6 +78,7 @@ export default {
             line-height: $base-line-height + 8px;
           }
           &-full {
+            display: grid;
             span:nth-child(1) {
               font-weight: 500;
               font-size: $base-font-size + 4px;
