@@ -414,6 +414,11 @@ export default {
       }
       &__column {
         &__left {
+          &-subtitle {
+            p:nth-child(3) {
+              bottom: -30px;
+            }
+          }
           &-btn {
             #green-button {
               padding: 16px 50px;

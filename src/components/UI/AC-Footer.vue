@@ -59,10 +59,18 @@ export default {
 }
 @media (max-width: 1240px) {
   .footer {
-    max-width: 968px;
+    max-width: 768px;
+    &__nav {
+      span {
+        font-size: 16px;
+      }
+      &__company {
+        text-align: end;
+      }
+    }
   }
 }
-@media (max-width: 968px) {
+@media (max-width: 768px) {
   .footer {
     max-width: 768px;
     border-radius: 32px 32px 0 0;
@@ -77,6 +85,7 @@ export default {
       }
       &__company {
         row-gap: 20px;
+        text-align: start;
         span {
           color: #a9abaa;
         }

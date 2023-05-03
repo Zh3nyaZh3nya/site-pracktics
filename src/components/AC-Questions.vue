@@ -2,7 +2,10 @@
   <section class="questions__wrapper" ref="Questions">
     <div class="questions__content">
       <div class="questions__content-title">
-        <h2>Вопросы и ответы</h2>
+        <h2>
+          Вопросы <br />
+          и ответы
+        </h2>
       </div>
       <div class="questions__content__list">
         <div
@@ -86,11 +89,16 @@ export default {
     padding: 100px 82px 48px 82px;
     margin-bottom: 16px;
     &-title {
-      font-weight: 800;
-      font-size: $h1-font-size;
-      line-height: $h1-line-height + 8px;
-      text-align: center;
       margin-bottom: 60px;
+      h2 {
+        font-weight: 800;
+        font-size: $h1-font-size;
+        line-height: $h1-line-height + 8px;
+        text-align: center;
+      }
+      br {
+        display: none;
+      }
     }
     &__list {
       padding: 48px 40px;
@@ -170,9 +178,11 @@ export default {
     max-width: 1360px;
     .questions__content {
       &-title {
-        font-size: $h1-font-size - 36px;
-        line-height: $h1-line-height - 8px;
         margin-bottom: 40px;
+        h2 {
+          font-size: $h1-font-size - 36px;
+          line-height: $h1-line-height - 8px;
+        }
       }
       &__list {
         padding: 36px 28px;
@@ -209,9 +219,14 @@ export default {
     max-width: 1024px;
     .questions__content {
       &-title {
-        font-size: $h1-font-size - 70px;
-        line-height: $h1-line-height - 28px;
         margin-bottom: 20px;
+        h2 {
+          font-size: $h1-font-size - 70px;
+          line-height: $h1-line-height - 28px;
+        }
+        br {
+          display: block;
+        }
       }
       &__list {
         &__item {
@@ -272,9 +287,10 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
       &-title {
-        max-width: 196px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       &__list {
         &__item {
