@@ -2,10 +2,20 @@
   <section class="consultant__wrapper">
     <div class="consultant__content">
       <div class="consultant__content-title">
-        <h2>Ваш персональный АвтоКонсультант в кармане</h2>
+        <h2>
+          Ваш персональный АвтоКонсультант <br />
+          в кармане
+        </h2>
       </div>
       <div class="consultant__content-subtitle">
-        <span>Максимально комфортная и безопасная эксплуатация автомобиля</span>
+        <span>
+          Максимально комфортная и безопасная <br />
+          эксплуатация автомобиля
+        </span>
+        <span>
+          напомнит когда пора менять масло <br />
+          или обновить срок действия автостраховки
+        </span>
       </div>
       <div class="consultant__content-btn">
         <ac-button id="green-button"><span>Купить</span></ac-button>
@@ -31,19 +41,35 @@ export default {
   text-align: center;
   margin-bottom: 16px;
   .consultant__content {
-    padding: 100px 82px 92px 83px;
+    padding: 111px 0px 92px 23px;
     &-title {
-      font-weight: 800;
-      font-size: $h2-font-size - 8px;
-      line-height: $h2-line-height - 8px;
       color: #fff;
       margin-bottom: 20px;
+      h2 {
+        font-weight: 800;
+        font-size: $h2-font-size - 7px;
+        line-height: $h2-line-height - 7px;
+      }
+      br {
+        display: none;
+      }
     }
     &-subtitle {
-      font-size: $base-font-size - 4px;
-      line-height: $base-line-height - 4px;
+      padding-left: 62px;
       color: #fff;
-      margin-bottom: 60px;
+      margin-bottom: 58px;
+      span {
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+      }
+      span:nth-child(2) {
+        display: none;
+      }
+    }
+    &-btn {
+      #green-button {
+        border-radius: 28px;
+      }
     }
   }
 }
@@ -60,10 +86,11 @@ export default {
         margin-bottom: 20px;
       }
       &-subtitle {
-        font-size: $base-font-size - 10px;
-        line-height: $base-line-height - 10px;
-        color: #fff;
         margin-bottom: 60px;
+        span {
+          font-size: $base-font-size - 10px;
+          line-height: $base-line-height - 10px;
+        }
       }
     }
   }
@@ -79,9 +106,11 @@ export default {
         color: #fff;
       }
       &-subtitle {
-        font-size: $base-font-size - 15px;
-        line-height: $base-line-height - 15px;
         color: #fff;
+        span {
+          font-size: $base-font-size - 15px;
+          line-height: $base-line-height - 15px;
+        }
       }
     }
   }
@@ -141,18 +170,36 @@ export default {
     max-width: 512px;
     background-size: 150% 100%;
     .consultant__content {
-      padding: 10px;
+      padding: 38px 9px 10px 10px;
       &-title {
+        margin-bottom: 16px;
         h2 {
-          font-size: $h2-font-size - 57px;
-          line-height: $h2-line-height - 57px;
+          font-size: 35px;
+          line-height: 36px;
+        }
+        br {
+          display: block;
         }
       }
       &-subtitle {
-        margin-bottom: 30px;
-        span {
-          font-size: $base-font-size - 20px;
-          line-height: $base-line-height - 20px;
+        padding-left: 0;
+        margin-bottom: 42px;
+        span:nth-child(1) {
+          display: none;
+        }
+        span:nth-child(2) {
+          display: block;
+          font-size: 20px;
+          line-height: 23px;
+        }
+      }
+      &-btn {
+        margin-bottom: 43px;
+        #green-button {
+          border-radius: 20px;
+          span {
+            font-size: 18px;
+          }
         }
       }
     }

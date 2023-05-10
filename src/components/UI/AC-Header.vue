@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="header__row__nav-button">
-          <ac-button><span>Xочу купить</span></ac-button>
+          <ac-button id="black-button"><span>Xочу купить</span></ac-button>
         </div>
       </nav>
       <div class="header__burger">
@@ -46,9 +46,9 @@
                 </div>
               </div>
               <div class="burger__row__nav-button">
-                <ac-button id="green-button"
-                  ><span>Xочу купить</span></ac-button
-                >
+                <ac-button id="black-button">
+                  <span>Xочу купить</span>
+                </ac-button>
               </div>
             </nav>
           </Transition>
@@ -89,13 +89,12 @@ export default {
   max-width: 1360px;
   width: 100%;
   margin: 0 auto;
-  padding: 28px 52px;
+  padding: 0px 31px 19px 51px;
   .header__row {
-    margin: 30px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     &-title {
+      padding-top: 29px;
       z-index: $z-index-header;
       span {
         font-weight: 700;
@@ -108,15 +107,16 @@ export default {
       }
     }
     &__nav {
+      padding: 26px 0 0 0;
       display: flex;
-      column-gap: 37px;
+      column-gap: 41px;
       &__link {
         display: flex;
         align-items: center;
-        column-gap: 37px;
+        column-gap: 43px;
         span {
           font-weight: 500;
-          font-size: 20px;
+          font-size: 21px;
           line-height: 90%;
         }
       }
@@ -140,9 +140,10 @@ export default {
     margin: 0 auto;
     position: relative;
     z-index: $z-index-header;
-    background: #d9d9d9;
     .header__row {
-      margin: 15px 0;
+      &-title {
+        padding: 0;
+      }
       &__nav {
         display: none;
       }
@@ -152,6 +153,7 @@ export default {
         z-index: $z-index-burger;
         background: #fff;
         padding: 4px 6px 7px 6px;
+        border-radius: 8px;
         .closedBurger {
           position: relative;
           button {
@@ -192,8 +194,10 @@ export default {
 }
 @media (max-width: 512px) {
   .header__wrapper {
+    padding: 5px 17px 10px 20px;
     .header__row {
       &-title {
+        padding-top: 5px;
         span {
           font-size: 26px;
         }

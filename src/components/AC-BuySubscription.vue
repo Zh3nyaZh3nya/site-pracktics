@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="subscription__content__column__right">
-          <img src="@/assets/images/Device.png" alt="" />
+          <img src="@/assets/images/rotateDevice.png" alt="" />
         </div>
       </div>
     </div>
@@ -49,15 +49,15 @@ export default {
       grid-template-columns: repeat(2, 1fr);
       padding: 98px 45px 65px 78px;
       &__left {
-        padding: 48px 58.5px;
+        padding: 43px 68px;
         background: #d9d9d9;
         border-radius: 48px;
         &-title {
           display: grid;
           font-weight: 900;
-          font-size: 164px;
-          line-height: 136px;
-          margin-bottom: 36px;
+          font-size: 168px;
+          line-height: 144px;
+          margin-bottom: 55px;
           span:nth-child(2) {
             font-weight: 800;
             font-size: 56px;
@@ -66,23 +66,28 @@ export default {
         }
         &__price {
           display: flex;
+          align-items: center;
           column-gap: 32px;
-          margin-bottom: 36px;
+          margin-bottom: 62px;
           &-disc {
-            background: #292929;
-            border-radius: 60px;
-            color: #fff;
-            padding: 15px;
-            font-weight: 500;
-            font-size: $base-font-size + 4px;
-            line-height: $base-line-height + 8px;
-          }
-          &-full {
-            display: grid;
-            span:nth-child(1) {
+            margin-left: 13px;
+            span {
+              background: #292929;
+              border-radius: 60px;
+              color: #fff;
               font-weight: 500;
               font-size: $base-font-size + 4px;
               line-height: $base-line-height + 8px;
+              padding: 13px;
+            }
+          }
+          &-full {
+            display: flex;
+            flex-direction: column;
+            span:nth-child(1) {
+              font-weight: 500;
+              font-size: $base-font-size + 4px;
+              line-height: $base-line-height + 10px;
               text-decoration-line: line-through;
             }
             span:nth-child(2) {
@@ -100,10 +105,9 @@ export default {
         }
       }
       &__right {
-        transform: rotate(6.04deg);
         position: absolute;
-        right: 80px;
-        bottom: 0px;
+        right: 16px;
+        bottom: -31px;
       }
     }
   }
@@ -114,7 +118,7 @@ export default {
     .subscription__content {
       &__column {
         &__right {
-          right: 60px;
+          right: 0px;
         }
       }
     }
@@ -167,7 +171,7 @@ export default {
         &__right {
           display: block;
           img {
-            width: 300px;
+            width: 430px;
           }
         }
       }
@@ -180,10 +184,18 @@ export default {
     .subscription__content {
       &__column {
         padding: 51px 0px 38px 22px;
+        &__left {
+          padding: 28px 34px;
+          &__price {
+            &-disc {
+              padding: 0px 20px;
+            }
+          }
+        }
         &__right {
           right: 0px;
           img {
-            width: 240px;
+            width: 370px;
           }
         }
       }
@@ -250,36 +262,47 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 24px 20px;
+        padding: 41px 20px;
         &__left {
           border-radius: 24px;
-          padding: 25px 20px;
+          padding: 27px 20px;
           &-title {
+            padding-left: 8px;
             font-size: 80px;
-            line-height: 80px;
+            line-height: 76px;
+            margin-bottom: 24px;
             span:nth-child(2) {
               font-size: 28px;
               line-height: 32px;
             }
           }
           &__price {
+            column-gap: 8px;
+            margin-bottom: 28px;
             &-disc {
-              font-size: $base-font-size - 20px;
-              line-height: $base-line-height - 20px;
+              margin-left: 6px;
+              span {
+                padding: 7px;
+                font-size: 20px;
+                line-height: 28px;
+              }
             }
             &-full {
               span:nth-child(1) {
-                font-size: $base-font-size - 20px;
-                line-height: $base-line-height - 20px;
+                font-size: 21px;
+                line-height: 30px;
               }
               span:nth-child(2) {
-                font-size: $small-font-size - 20px;
-                line-height: $small-line-height - 20px;
+                font-size: 13px;
+                line-height: 18px;
               }
             }
             &-btn {
               #green-button {
-                padding: 21px 100px;
+                padding: 21px 120px;
+                span {
+                  font-size: 17px;
+                }
               }
             }
           }

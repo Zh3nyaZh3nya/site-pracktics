@@ -23,6 +23,13 @@ export default {
     line-height: 100%;
   }
 }
+#black-button {
+  border-radius: 16px;
+  padding: 14px 37px;
+  span {
+    font-size: 20px;
+  }
+}
 #green-button {
   padding: 32px 80px;
   color: #000;

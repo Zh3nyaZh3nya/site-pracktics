@@ -60,14 +60,11 @@ export default {
 <style lang="scss">
 @import "@/assets/scss/variables.scss";
 .function__wrapper {
-  display: block;
-  max-width: 1360px;
-  width: 100%;
-  margin: 0 auto;
   padding-top: 144px;
   .function__content {
     &-title {
       text-align: center;
+      padding-left: 20px;
       font-weight: 700;
       font-size: $h2-font-size;
       line-height: $h2-line-height;
@@ -84,16 +81,18 @@ export default {
           align-items: center;
           justify-content: center;
           min-height: 268px;
-          text-align: center;
           background: #d9d9d9;
           border-radius: 52px;
-          margin-bottom: 20px;
+          margin-bottom: 18px;
+          padding-left: 12px;
         }
         &-subtitle {
           font-weight: 500;
           font-size: $small-font-size;
           line-height: $small-line-height + 2px;
           text-align: center;
+          padding-top: 2px;
+          padding-left: 8px;
         }
       }
     }
@@ -131,14 +130,29 @@ export default {
     max-width: 360px;
     .function__content {
       &-title {
+        padding-left: 0;
         margin-bottom: 32px;
         h2 {
           font-weight: 800;
           font-size: 37px;
+          line-height: 35px;
         }
       }
       &__reminders {
         grid-template-columns: 1fr;
+        &__option {
+          &-img {
+            min-height: 157px;
+            padding-left: 10px;
+            img {
+              min-width: 45px;
+              max-height: 90px;
+            }
+          }
+          &-subtitle {
+            font-size: 19px;
+          }
+        }
       }
     }
   }

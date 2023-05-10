@@ -60,7 +60,7 @@ export default {
   position: relative;
   background: #fff;
   z-index: 1;
-  padding: 56px;
+  padding: 56px 66px;
   border-radius: 60px;
   margin-bottom: 16px;
   .description__content {
@@ -70,7 +70,7 @@ export default {
       h1 {
         font-weight: 800;
         font-size: $h1-font-size;
-        line-height: $h1-line-height;
+        line-height: 120px;
       }
       &-message {
         display: none;
@@ -83,6 +83,7 @@ export default {
         position: relative;
         flex-basis: 770px;
         &-subtitle {
+          margin-bottom: 7px;
           span {
             font-weight: 500;
             font-size: $base-font-size;
@@ -113,7 +114,7 @@ export default {
           height: 150px;
           z-index: 3;
           top: 0;
-          left: -170px;
+          left: -177px;
         }
         :after {
           content: "";
@@ -126,7 +127,7 @@ export default {
         &-img {
           display: block;
           position: absolute;
-          top: -250px;
+          top: -264px;
           left: 55px;
         }
       }
@@ -138,6 +139,11 @@ export default {
     max-width: 1360px;
     .description__content {
       margin-bottom: 200px;
+      &-title {
+        h1 {
+          font-size: 120px;
+        }
+      }
       &__column {
         &__left {
           flex-basis: 690px;
@@ -272,7 +278,7 @@ export default {
 }
 @media (max-width: 767px) {
   .description__wrapper {
-    padding: 32px 20px;
+    padding: 38px 20px;
     .description__content {
       &-title {
         position: relative;
@@ -329,26 +335,26 @@ export default {
     .description__content {
       &-title {
         display: block;
-        margin-bottom: 0;
+        margin-bottom: 16px;
         :after {
           background: url("@/assets/images/adaptive/adaptivTelegramBot.png")
             no-repeat;
-          top: 55px;
+          top: 42px;
           left: 200px;
           width: 120px;
           height: 50px;
         }
         h1 {
           font-weight: 800;
-          font-size: $h2-font-size - 49px;
-          line-height: 50px;
+          font-size: $h2-font-size - 50px;
+          line-height: 37px;
         }
       }
       &__column {
         display: flex;
         flex-direction: column;
         &__left {
-          max-width: 320px;
+          max-width: 340px;
           flex-basis: 100px;
           &-btn {
             #green-button {
@@ -360,8 +366,8 @@ export default {
             position: relative;
             span {
               display: block;
-              font-size: $small-font-size - 14px;
-              line-height: 28px;
+              font-size: $small-font-size - 13px;
+              line-height: 24px;
             }
             p:nth-child(2) {
               display: none;
@@ -370,7 +376,15 @@ export default {
               display: block;
               position: absolute;
               right: -5px;
-              bottom: -14px;
+              bottom: -21px;
+            }
+          }
+          &-btn {
+            #green-button {
+              padding: 21px 120px;
+              span {
+                font-size: 17px;
+              }
             }
           }
         }
@@ -384,8 +398,8 @@ export default {
             content: "";
             background: url("@/assets/images/adaptive/adaptivDevice.png")
               no-repeat;
-            width: 270px;
-            height: 536px;
+            width: 266px;
+            height: 535px;
             z-index: 2;
           }
         }

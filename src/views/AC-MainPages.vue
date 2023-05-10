@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss">
 #app {
-  background: #d9d9d9;
+  background: #b5b5b5;
 }
 .main__pages {
   padding: 0 40px;

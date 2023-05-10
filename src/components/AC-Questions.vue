@@ -15,7 +15,8 @@
         >
           <div class="questions__content__list__item__header">
             <div class="questions__content__list__item__header-title">
-              <span>{{ question.titleQuestions }}</span>
+              <span v-html="question.titleQuestions"></span>
+              <span v-html="question.titleQuestionsAdaptive"></span>
             </div>
             <div class="questions__content__list__item__header-btn">
               <button
@@ -55,18 +56,23 @@ export default {
         {
           id: 1,
           titleQuestions: "Можно ли вернуть деньги если передумал?",
+          titleQuestionsAdaptive:
+            "Можно ли вернуть<br /> деньги если передумал?",
           subtitleQuestions: "нельзя",
           isOpen: false,
         },
         {
           id: 2,
           titleQuestions: "Какие дополнительные функции планируете добавить?",
+          titleQuestionsAdaptive:
+            "Какие дополнительные функцию планируются добавлять?",
           subtitleQuestions: "не важно",
           isOpen: false,
         },
         {
           id: 3,
           titleQuestions: "Как работает бот?",
+          titleQuestionsAdaptive: "Как работает сам бот? ",
           subtitleQuestions: "отлично",
           isOpen: false,
         },
@@ -86,7 +92,7 @@ export default {
   background: #fff;
   border-radius: 60px;
   .questions__content {
-    padding: 100px 82px 48px 82px;
+    padding: 96px 0 48px 19px;
     margin-bottom: 16px;
     &-title {
       margin-bottom: 60px;
@@ -101,13 +107,14 @@ export default {
       }
     }
     &__list {
-      padding: 48px 40px;
+      padding: 42px 36px 42px 41px;
       background: #d9d9d9;
       border-radius: 48px;
+      margin: 0 69px;
       &__item {
         display: flex;
         flex-direction: column;
-        margin-bottom: 26px;
+        margin-bottom: 32px;
         &__header {
           display: flex;
           justify-content: space-between;
@@ -115,9 +122,17 @@ export default {
           align-items: center;
           text-align: center;
           &-title {
-            font-weight: 400;
-            font-size: $small-font-size;
-            line-height: $small-font-size;
+            span {
+              font-weight: 400;
+              font-size: $small-font-size;
+              line-height: $small-font-size;
+            }
+            span:nth-child(2) {
+              display: none;
+            }
+          }
+          br {
+            display: none;
           }
         }
         &-subtitle {
@@ -133,7 +148,7 @@ export default {
   }
   button {
     background: $green-color;
-    padding: 12px;
+    padding: 10px;
     border-radius: 50%;
   }
   .fade-enter-active {
@@ -317,27 +332,44 @@ export default {
     max-width: 512px;
     border-radius: 32px;
     .questions__content {
+      padding-top: 30px;
       &-title {
+        margin-bottom: 33px;
         h2 {
           font-weight: 800;
-          font-size: $h1-font-size - 90px;
-          line-height: $h1-line-height - 55px;
+          font-size: 38px;
+          line-height: 36px;
         }
       }
       &__list {
-        padding: 36px 16px 10px 16px;
+        padding: 39px 16px 10px 16px;
         border-radius: 24px;
+        margin: 0;
         &__item {
+          margin-bottom: 25px;
           &__header {
+            margin-bottom: 24px;
             &-title {
-              font-weight: 400;
-              font-size: $small-font-size - 13px;
-              line-height: $small-font-size;
+              span:nth-child(1) {
+                display: none;
+              }
+              span:nth-child(2) {
+                display: block;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 25px;
+              }
+            }
+            br {
+              display: block;
             }
             &-btn {
               button {
-                width: 44px;
-                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 36px;
+                height: 36px;
                 img {
                   width: 20px;
                   height: 20px;

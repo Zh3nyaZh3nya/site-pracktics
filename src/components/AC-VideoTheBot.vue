@@ -14,6 +14,15 @@
       </button>
     </div>
   </section>
+  <section v-else>
+    <div class="video__wrapper__empty">
+      <div class="video__content__empty">
+        <button>
+          <img src="@/assets/svgIcon/Play.svg" alt="" />
+        </button>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -73,6 +82,24 @@ export default {
     }
   }
 }
+.video__wrapper__empty {
+  background: #d9d9d9;
+  max-width: 1248px;
+  min-height: 682px;
+  border-radius: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .video__content__empty {
+    position: relative;
+    padding-left: 10px;
+    button {
+      background: #fff;
+      padding: 40px 39px 40px 46px;
+      border-radius: 50%;
+    }
+  }
+}
 @media (max-width: 1240px) {
   .video__wrapper {
     max-width: 1240px;
@@ -114,6 +141,20 @@ export default {
       }
       button {
         display: block;
+      }
+    }
+  }
+  .video__wrapper__empty {
+    min-height: 184px;
+    .video__content__empty {
+      button {
+        background: #fff;
+        padding: 11px 13px 10px 14px;
+        border-radius: 50%;
+        img {
+          width: 11px;
+          height: 14px;
+        }
       }
     }
   }

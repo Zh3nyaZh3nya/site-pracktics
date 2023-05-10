@@ -27,7 +27,7 @@ export default {
   &__nav {
     display: flex;
     justify-content: space-between;
-    padding: 94px 56px;
+    padding: 101px 66px 94px 66px;
     span {
       font-weight: 400;
       font-size: 24px;
@@ -37,10 +37,11 @@ export default {
       display: grid;
       span {
         color: #a9abaa;
+        margin-bottom: 16px;
       }
       img {
-        margin-left: 120px;
-        width: 134px;
+        margin-left: 112px;
+        width: 142px;
       }
     }
   }
@@ -59,7 +60,7 @@ export default {
 }
 @media (max-width: 1240px) {
   .footer {
-    max-width: 768px;
+    max-width: 1024px;
     &__nav {
       span {
         font-size: 16px;
@@ -70,6 +71,11 @@ export default {
     }
   }
 }
+@media (max-width: 1024px) {
+  .footer {
+    max-width: 768px;
+  }
+}
 @media (max-width: 768px) {
   .footer {
     max-width: 768px;
@@ -78,13 +84,12 @@ export default {
       display: grid;
       grid-template-columns: 1fr;
       row-gap: 20px;
-      padding: 40px 20px;
+      padding: 26px 20px;
       span {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 20px;
       }
       &__company {
-        row-gap: 20px;
         text-align: start;
         span {
           color: #a9abaa;
