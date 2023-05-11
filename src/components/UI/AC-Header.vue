@@ -46,7 +46,7 @@
                 </div>
               </div>
               <div class="burger__row__nav-button">
-                <ac-button id="black-button">
+                <ac-button id="green-button">
                   <span>Xочу купить</span>
                 </ac-button>
               </div>
@@ -109,11 +109,11 @@ export default {
     &__nav {
       padding: 26px 0 0 0;
       display: flex;
-      column-gap: 41px;
+      column-gap: 39px;
       &__link {
         display: flex;
         align-items: center;
-        column-gap: 43px;
+        column-gap: 42px;
         span {
           font-weight: 500;
           font-size: 21px;
@@ -173,10 +173,10 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            padding-left: 20px;
             background: #d9d9d9;
             button {
-              margin-bottom: 45px;
+              margin-bottom: 13px;
             }
             #green-button {
               padding: 22px 71px;
@@ -199,7 +199,23 @@ export default {
       &-title {
         padding-top: 5px;
         span {
-          font-size: 26px;
+          font-size: 25px;
+        }
+      }
+      .header__burger {
+        .closedBurger {
+          .burger__row__nav {
+            &__link {
+              margin-bottom: 31px;
+            }
+            #green-button {
+              padding: 10px 120px;
+              span {
+                font-weight: 600;
+                font-size: 17px;
+              }
+            }
+          }
         }
       }
     }

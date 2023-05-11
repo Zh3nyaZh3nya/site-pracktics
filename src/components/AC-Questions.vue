@@ -92,7 +92,7 @@ export default {
   background: #fff;
   border-radius: 60px;
   .questions__content {
-    padding: 96px 0 48px 19px;
+    padding: 98px 0 48px 19px;
     margin-bottom: 16px;
     &-title {
       margin-bottom: 60px;
@@ -107,7 +107,7 @@ export default {
       }
     }
     &__list {
-      padding: 42px 36px 42px 41px;
+      padding: 40px 36px 42px 41px;
       background: #d9d9d9;
       border-radius: 48px;
       margin: 0 69px;
@@ -124,7 +124,7 @@ export default {
           &-title {
             span {
               font-weight: 400;
-              font-size: $small-font-size;
+              font-size: $small-font-size + 1px;
               line-height: $small-font-size;
             }
             span:nth-child(2) {

@@ -49,10 +49,11 @@ export default {
       grid-template-columns: repeat(2, 1fr);
       padding: 98px 45px 65px 78px;
       &__left {
-        padding: 43px 68px;
+        padding: 43px 0px;
         background: #d9d9d9;
         border-radius: 48px;
         &-title {
+          padding-left: 68px;
           display: grid;
           font-weight: 900;
           font-size: 168px;
@@ -69,6 +70,7 @@ export default {
           align-items: center;
           column-gap: 32px;
           margin-bottom: 62px;
+          padding-left: 68px;
           &-disc {
             margin-left: 13px;
             span {
@@ -98,6 +100,7 @@ export default {
             }
           }
           &-btn {
+            padding: 0 60px;
             #green-button {
               padding: 52px 252px;
             }
@@ -107,7 +110,7 @@ export default {
       &__right {
         position: absolute;
         right: 16px;
-        bottom: -31px;
+        bottom: -23px;
       }
     }
   }
@@ -266,11 +269,12 @@ export default {
         &__left {
           border-radius: 24px;
           padding: 27px 20px;
+          max-width: 335px;
           &-title {
-            padding-left: 8px;
-            font-size: 80px;
+            font-size: 83px;
             line-height: 76px;
             margin-bottom: 24px;
+            padding-left: 8px;
             span:nth-child(2) {
               font-size: 28px;
               line-height: 32px;
@@ -279,6 +283,7 @@ export default {
           &__price {
             column-gap: 8px;
             margin-bottom: 28px;
+            padding-left: 0;
             &-disc {
               margin-left: 6px;
               span {
@@ -298,6 +303,7 @@ export default {
               }
             }
             &-btn {
+              padding: 0;
               #green-button {
                 padding: 21px 120px;
                 span {

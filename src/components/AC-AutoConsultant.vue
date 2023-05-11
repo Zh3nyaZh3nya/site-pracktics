@@ -44,10 +44,10 @@ export default {
     padding: 111px 0px 92px 23px;
     &-title {
       color: #fff;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       h2 {
         font-weight: 800;
-        font-size: $h2-font-size - 7px;
+        font-size: $h2-font-size - 8px;
         line-height: $h2-line-height - 7px;
       }
       br {

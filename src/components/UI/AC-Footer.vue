@@ -27,10 +27,10 @@ export default {
   &__nav {
     display: flex;
     justify-content: space-between;
-    padding: 101px 66px 94px 66px;
+    padding: 99px 55px 94px 66px;
     span {
       font-weight: 400;
-      font-size: 24px;
+      font-size: 25px;
       line-height: 28px;
     }
     &__company {

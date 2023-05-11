@@ -10,11 +10,22 @@
           v-for="reminder in functionBot"
           :key="reminder.id"
         >
-          <div class="function__content__reminders__option-img">
+          <div
+            class="function__content__reminders__option-img"
+            :class="reminder.class"
+          >
             <img
               :src="require('@/assets/images/' + reminder.imgFunc)"
               alt="#"
             />
+            <div
+              class="function__content__reminders__option-img-text"
+              v-if="reminder.othersFunc"
+            >
+              <span v-for="text in reminder.othersFunc" :key="text.id">
+                {{ text.text }}
+              </span>
+            </div>
           </div>
           <div class="function__content__reminders__option-subtitle">
             {{ reminder.descFunc }}
@@ -49,7 +60,34 @@ export default {
         {
           id: 4,
           imgFunc: "phone.png",
+          othersFunc: [
+            {
+              id: 1,
+              text: "Антифриз",
+            },
+            {
+              id: 2,
+              text: "Ремень ГРМ",
+            },
+            {
+              id: 3,
+              text: "Дворники",
+            },
+            {
+              id: 4,
+              text: "Аккумулятор",
+            },
+            {
+              id: 5,
+              text: "Тормозная жидкость",
+            },
+            {
+              id: 6,
+              text: "Салонный фильтр",
+            },
+          ],
           descFunc: "и о многом другом",
+          class: "offsetImg",
         },
       ],
     };
@@ -75,6 +113,7 @@ export default {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 36px;
       row-gap: 36px;
+      overflow: hidden;
       &__option {
         &-img {
           display: flex;
@@ -85,6 +124,40 @@ export default {
           border-radius: 52px;
           margin-bottom: 18px;
           padding-left: 12px;
+          overflow: hidden;
+          position: relative;
+          img {
+            position: relative;
+            z-index: 1;
+          }
+          &-text {
+            position: absolute;
+            display: flex;
+            justify-content: end;
+            flex-wrap: wrap;
+            gap: 15px;
+            z-index: 1;
+            right: -136px;
+            span {
+              font-weight: 500;
+              display: flex;
+              text-align: center;
+              font-size: 22px;
+              line-height: 30px;
+              background: #fff;
+              padding: 12px 20px;
+              border-radius: 12px;
+            }
+            span:nth-child(3) {
+              flex-basis: 248px;
+            }
+          }
+        }
+        .offsetImg {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          padding-left: 126px;
         }
         &-subtitle {
           font-weight: 500;
@@ -147,6 +220,20 @@ export default {
             img {
               min-width: 45px;
               max-height: 90px;
+            }
+            &-text {
+              right: -282px;
+            }
+            span {
+              font-size: 11px;
+              line-height: 17px;
+              padding: 6px 8px;
+            }
+            span:nth-child(3) {
+              flex-basis: 306px;
+            }
+            span:nth-child(6) {
+              flex-basis: 53%;
             }
           }
           &-subtitle {
