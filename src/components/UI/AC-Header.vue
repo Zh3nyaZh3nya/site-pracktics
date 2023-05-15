@@ -183,8 +183,8 @@ export default {
             }
             span {
               font-weight: 800;
-              font-size: $small-font-size + 2px;
-              line-height: $small-line-height + 2px;
+              font-size: 34px;
+              line-height: 40px;
             }
           }
         }
@@ -238,8 +238,8 @@ export default {
             }
             span {
               font-weight: 800;
-              font-size: $small-font-size - 6px;
-              line-height: $small-line-height + 2px;
+              font-size: 26px;
+              line-height: 40px;
             }
           }
         }

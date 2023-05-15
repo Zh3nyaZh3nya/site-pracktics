@@ -47,8 +47,8 @@ export default {
       margin-bottom: 22px;
       h2 {
         font-weight: 800;
-        font-size: $h2-font-size - 8px;
-        line-height: $h2-line-height - 7px;
+        font-size: 80px;
+        line-height: 81px;
       }
       br {
         display: none;
@@ -80,16 +80,16 @@ export default {
       margin-bottom: 16px;
       &-title {
         font-weight: 800;
-        font-size: $h2-font-size - 16px;
-        line-height: $h2-line-height - 16px;
+        font-size: 72px;
+        line-height: 72px;
         color: #fff;
         margin-bottom: 20px;
       }
       &-subtitle {
         margin-bottom: 60px;
         span {
-          font-size: $base-font-size - 10px;
-          line-height: $base-line-height - 10px;
+          font-size: 30px;
+          line-height: 38px;
         }
       }
     }
@@ -101,15 +101,15 @@ export default {
     .consultant__content {
       &-title {
         font-weight: 800;
-        font-size: $h2-font-size - 32px;
-        line-height: $h2-line-height - 32px;
+        font-size: 56px;
+        line-height: 56px;
         color: #fff;
       }
       &-subtitle {
         color: #fff;
         span {
-          font-size: $base-font-size - 15px;
-          line-height: $base-line-height - 15px;
+          font-size: 25px;
+          line-height: 33px;
         }
       }
     }
@@ -122,15 +122,15 @@ export default {
       &-title {
         h2 {
           font-weight: 800;
-          font-size: $h2-font-size - 50px;
-          line-height: $h2-line-height - 50px;
+          font-size: 38px;
+          line-height: 38px;
           color: #fff;
         }
       }
       &-subtitle {
         span {
-          font-size: $base-font-size - 18px;
-          line-height: $base-line-height - 18px;
+          font-size: 22px;
+          line-height: 30px;
           color: #fff;
         }
       }
@@ -146,14 +146,14 @@ export default {
       &-title {
         margin-bottom: 16px;
         h2 {
-          font-size: $h2-font-size - 53px;
-          line-height: $h2-line-height - 53px;
+          font-size: 35px;
+          line-height: 35px;
         }
       }
       &-subtitle {
         span {
-          font-size: $base-font-size - 20px;
-          line-height: $base-line-height - 25px;
+          font-size: 20px;
+          line-height: 23px;
         }
       }
       &-btn {

@@ -78,8 +78,8 @@ export default {
               border-radius: 60px;
               color: #fff;
               font-weight: 500;
-              font-size: $base-font-size + 4px;
-              line-height: $base-line-height + 8px;
+              font-size: 44px;
+              line-height: 56px;
               padding: 13px;
             }
           }
@@ -88,14 +88,14 @@ export default {
             flex-direction: column;
             span:nth-child(1) {
               font-weight: 500;
-              font-size: $base-font-size + 4px;
-              line-height: $base-line-height + 10px;
+              font-size: 44px;
+              line-height: 58px;
               text-decoration-line: line-through;
             }
             span:nth-child(2) {
               font-weight: 500;
-              font-size: $small-font-size - 4px;
-              line-height: $small-line-height - 6px;
+              font-size: 28px;
+              line-height: 32px;
               color: #6c6c6c;
             }
           }
@@ -110,7 +110,7 @@ export default {
       &__right {
         position: absolute;
         right: 16px;
-        bottom: -23px;
+        bottom: -30px;
       }
     }
   }
@@ -145,22 +145,22 @@ export default {
           &__price {
             &-disc {
               padding: 5px 20px;
-              font-size: $base-font-size - 20px;
-              line-height: $base-line-height - 12px;
+              font-size: 20px;
+              line-height: 36px;
             }
             &-full {
               display: grid;
               grid-template-columns: 1fr;
               span:nth-child(1) {
                 font-weight: 500;
-                font-size: $base-font-size - 20px;
-                line-height: $base-line-height - 20px;
+                font-size: 20px;
+                line-height: 28px;
                 text-decoration-line: line-through;
               }
               span:nth-child(2) {
                 font-weight: 500;
-                font-size: $small-font-size - 16px;
-                line-height: $small-line-height - 16px;
+                font-size: 16px;
+                line-height: 22px;
                 color: #6c6c6c;
               }
             }
@@ -223,20 +223,20 @@ export default {
           &__price {
             &-disc {
               padding: 10px;
-              font-size: $base-font-size - 22px;
-              line-height: $base-line-height - 18px;
+              font-size: 18px;
+              line-height: 30px;
             }
             &-full {
               span:nth-child(1) {
                 font-weight: 500;
-                font-size: $base-font-size - 27px;
-                line-height: $base-line-height - 27px;
+                font-size: 13px;
+                line-height: 21px;
                 text-decoration-line: line-through;
               }
               span:nth-child(2) {
                 font-weight: 500;
-                font-size: $small-font-size - 21px;
-                line-height: $small-line-height - 21px;
+                font-size: 11px;
+                line-height: 17px;
                 color: #6c6c6c;
               }
             }
@@ -339,20 +339,20 @@ export default {
           &__price {
             &-disc {
               padding: 10px 20px;
-              font-size: $base-font-size - 22px;
-              line-height: $base-line-height - 18px;
+              font-size: 18px;
+              line-height: 30px;
             }
             &-full {
               span:nth-child(1) {
                 font-weight: 500;
-                font-size: $base-font-size - 27px;
-                line-height: $base-line-height - 27px;
+                font-size: 13px;
+                line-height: 21px;
                 text-decoration-line: line-through;
               }
               span:nth-child(2) {
                 font-weight: 500;
-                font-size: $small-font-size - 21px;
-                line-height: $small-line-height - 21px;
+                font-size: 11px;
+                line-height: 17px;
                 color: #6c6c6c;
               }
             }

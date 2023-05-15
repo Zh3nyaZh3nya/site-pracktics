@@ -344,7 +344,7 @@ export default {
         }
         h1 {
           font-weight: 800;
-          font-size: $h2-font-size - 50px;
+          font-size: 38px;
           line-height: 37px;
         }
       }
@@ -364,7 +364,7 @@ export default {
             position: relative;
             span {
               display: block;
-              font-size: $small-font-size - 13px;
+              font-size: 19px;
               line-height: 24px;
             }
             p:nth-child(2) {
@@ -420,7 +420,7 @@ export default {
         }
         h1 {
           font-weight: 800;
-          font-size: $h2-font-size - 60px;
+          font-size: 28px;
           line-height: 40px;
         }
       }

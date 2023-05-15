@@ -182,16 +182,16 @@ export default {
     .function__content {
       &-title {
         font-weight: 700;
-        font-size: $h2-font-size - 28px;
-        line-height: $h2-line-height - 28px;
+        font-size: 60px;
+        line-height: 60px;
       }
       &__reminders {
         column-gap: 24px;
         row-gap: 24px;
         &__option {
           &-subtitle {
-            font-size: $small-font-size - 14px;
-            line-height: $small-line-height - 14px;
+            font-size: 18px;
+            line-height: 20px;
           }
         }
       }
@@ -253,8 +253,8 @@ export default {
       &-title {
         h2 {
           font-weight: 800;
-          font-size: $h2-font-size - 33px;
-          line-height: $h2-line-height - 38px;
+          font-size: 55px;
+          line-height: 50px;
         }
       }
       &__reminders {

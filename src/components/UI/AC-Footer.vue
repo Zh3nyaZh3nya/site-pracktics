@@ -27,7 +27,7 @@ export default {
   &__nav {
     display: flex;
     justify-content: space-between;
-    padding: 99px 55px 94px 66px;
+    padding: 101px 55px 94px 66px;
     span {
       font-weight: 400;
       font-size: 25px;
