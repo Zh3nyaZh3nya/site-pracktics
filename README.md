@@ -1,4 +1,4 @@
-# practica №1
+# site-practica №1
 
 ```
 Vue 3 (Option Api, SCSS)
